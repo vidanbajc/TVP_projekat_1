@@ -1,0 +1,13 @@
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\bin\Debug\TVP_projekat_1.exe.config
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\bin\Debug\TVP_projekat_1.exe
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\bin\Debug\TVP_projekat_1.pdb
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.csproj.AssemblyReference.cache
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.Administrator.resources
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.Klijent.resources
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.Pocetna.resources
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.Properties.Resources.resources
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.csproj.GenerateResource.cache
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.csproj.CoreCompileInputs.cache
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.exe
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.pdb
+C:\Users\Bajc\Desktop\TVP_projekat_1\TVP_projekat_1\obj\Debug\TVP_projekat_1.exe.config

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TVP_projekat_1
 {
-    class Igrica
+    public class Igrica
     {
         private int id_igrice;
         private string naziv_igrice;

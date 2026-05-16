@@ -12,9 +12,13 @@ namespace TVP_projekat_1
 {
     public partial class Klijent : Form
     {
-        public Klijent()
+        public Pocetna p;
+        private Korisnik korisnik;
+        public Klijent(Pocetna p, Korisnik korisnik)
         {
             InitializeComponent();
+            this.p = p;
+            this.korisnik = korisnik;
         }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.izlaz = new System.Windows.Forms.Button();
-            this.prijava = new System.Windows.Forms.Button();
+            this.btn_izlaz = new System.Windows.Forms.Button();
+            this.btn_prijava = new System.Windows.Forms.Button();
             this.tb_lozinka = new System.Windows.Forms.TextBox();
             this.tb_korisnicko_ime = new System.Windows.Forms.TextBox();
             this.lbl_lozinka = new System.Windows.Forms.Label();
@@ -37,25 +37,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // izlaz
+            // btn_izlaz
             // 
-            this.izlaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.izlaz.Location = new System.Drawing.Point(16, 204);
-            this.izlaz.Name = "izlaz";
-            this.izlaz.Size = new System.Drawing.Size(100, 40);
-            this.izlaz.TabIndex = 23;
-            this.izlaz.Text = "Izadji";
-            this.izlaz.UseVisualStyleBackColor = true;
+            this.btn_izlaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_izlaz.Location = new System.Drawing.Point(16, 204);
+            this.btn_izlaz.Name = "btn_izlaz";
+            this.btn_izlaz.Size = new System.Drawing.Size(100, 40);
+            this.btn_izlaz.TabIndex = 23;
+            this.btn_izlaz.Text = "Izadji";
+            this.btn_izlaz.UseVisualStyleBackColor = true;
+            this.btn_izlaz.Click += new System.EventHandler(this.btn_izlaz_Click);
             // 
-            // prijava
+            // btn_prijava
             // 
-            this.prijava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prijava.Location = new System.Drawing.Point(16, 158);
-            this.prijava.Name = "prijava";
-            this.prijava.Size = new System.Drawing.Size(100, 40);
-            this.prijava.TabIndex = 22;
-            this.prijava.Text = "Prijavi se";
-            this.prijava.UseVisualStyleBackColor = true;
+            this.btn_prijava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_prijava.Location = new System.Drawing.Point(16, 158);
+            this.btn_prijava.Name = "btn_prijava";
+            this.btn_prijava.Size = new System.Drawing.Size(100, 40);
+            this.btn_prijava.TabIndex = 22;
+            this.btn_prijava.Text = "Prijavi se";
+            this.btn_prijava.UseVisualStyleBackColor = true;
+            this.btn_prijava.Click += new System.EventHandler(this.btn_prijava_Click);
             // 
             // tb_lozinka
             // 
@@ -108,8 +110,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
-            this.Controls.Add(this.izlaz);
-            this.Controls.Add(this.prijava);
+            this.Controls.Add(this.btn_izlaz);
+            this.Controls.Add(this.btn_prijava);
             this.Controls.Add(this.tb_lozinka);
             this.Controls.Add(this.tb_korisnicko_ime);
             this.Controls.Add(this.lbl_lozinka);
@@ -124,8 +126,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button izlaz;
-        private System.Windows.Forms.Button prijava;
+        private System.Windows.Forms.Button btn_izlaz;
+        private System.Windows.Forms.Button btn_prijava;
         private System.Windows.Forms.TextBox tb_lozinka;
         private System.Windows.Forms.TextBox tb_korisnicko_ime;
         private System.Windows.Forms.Label lbl_lozinka;

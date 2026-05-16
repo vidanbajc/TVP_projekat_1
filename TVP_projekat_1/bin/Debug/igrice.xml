@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ArrayOfIgrica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Igrica>
+    <Id_igrice>1</Id_igrice>
+    <Naziv_igrice>League of Legends</Naziv_igrice>
+    <Naziv_studija>Riot</Naziv_studija>
+    <Zanr>moba</Zanr>
+    <Godina_izdavanja>2011</Godina_izdavanja>
+    <Platforma>aa</Platforma>
+    <Opis>aaaaaa</Opis>
+    <Cena_izdavanja>2000</Cena_izdavanja>
+    <Broj_dostupnih_primeraka>5</Broj_dostupnih_primeraka>
+    <Starosna_granica>13</Starosna_granica>
+  </Igrica>
+  <Igrica>
+    <Id_igrice>2</Id_igrice>
+    <Naziv_igrice>Counter Strike 2</Naziv_igrice>
+    <Naziv_studija>Valve</Naziv_studija>
+    <Zanr>moba</Zanr>
+    <Godina_izdavanja>2025</Godina_izdavanja>
+    <Platforma>aa</Platforma>
+    <Opis>aaaaaa</Opis>
+    <Cena_izdavanja>2500</Cena_izdavanja>
+    <Broj_dostupnih_primeraka>10</Broj_dostupnih_primeraka>
+    <Starosna_granica>13</Starosna_granica>
+  </Igrica>
+  <Igrica>
+    <Id_igrice>3</Id_igrice>
+    <Naziv_igrice>Rainbow</Naziv_igrice>
+    <Naziv_studija>aa</Naziv_studija>
+    <Zanr>aa</Zanr>
+    <Godina_izdavanja>2011</Godina_izdavanja>
+    <Platforma>aa</Platforma>
+    <Opis>aaaaaa</Opis>
+    <Cena_izdavanja>3000</Cena_izdavanja>
+    <Broj_dostupnih_primeraka>5</Broj_dostupnih_primeraka>
+    <Starosna_granica>14</Starosna_granica>
+  </Igrica>
+</ArrayOfIgrica>

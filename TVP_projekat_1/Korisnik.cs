@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TVP_projekat_1
 {
-    class Korisnik
+    public class Korisnik
     {
         private int id_korisnika;
         private string ime;

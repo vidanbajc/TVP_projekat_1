@@ -67,6 +67,7 @@
     <Compile Include="Pocetna.Designer.cs">
       <DependentUpon>Pocetna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Podaci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrator.resx">

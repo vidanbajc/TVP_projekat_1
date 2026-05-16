@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ArrayOfIzdavanje xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Izdavanje>
+    <Id_korisnika>1</Id_korisnika>
+    <Id_igrice>1</Id_igrice>
+    <Datum_izdavanja>2026-05-16T00:00:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-26T00:00:00</Datum_vracanja>
+    <Ukupna_cena>4000</Ukupna_cena>
+    <Status_izdavanja>aktivno</Status_izdavanja>
+  </Izdavanje>
+</ArrayOfIzdavanje>

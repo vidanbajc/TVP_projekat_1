@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace TVP_projekat_1
 {
-    class Izdavanje
+    public class Izdavanje
     {
         private int id_korisnika;
         private int id_igrice;
         private DateTime datum_izdavanja;
         private DateTime datum_vracanja;
         private double ukupna_cena;
-        private bool status_izdavanja;
+        private string status_izdavanja;
 
         public int Id_korisnika { get => id_korisnika; set => id_korisnika = value; }
         public int Id_igrice { get => id_igrice; set => id_igrice = value; }
         public DateTime Datum_izdavanja { get => datum_izdavanja; set => datum_izdavanja = value; }
         public DateTime Datum_vracanja { get => datum_vracanja; set => datum_vracanja = value; }
         public double Ukupna_cena { get => ukupna_cena; set => ukupna_cena = value; }
-        public bool Status_izdavanja { get => status_izdavanja; set => status_izdavanja = value; }
+        public string Status_izdavanja { get => status_izdavanja; set => status_izdavanja = value; }
 
         public Izdavanje() { }
-        public Izdavanje(int id_korisnika, int id_igrice, DateTime datum_izdavanja, DateTime datum_vracanja, double ukupna_cena, bool status_izdavanja)
+        public Izdavanje(int id_korisnika, int id_igrice, DateTime datum_izdavanja, DateTime datum_vracanja, double ukupna_cena, string status_izdavanja)
         {
             this.id_korisnika = id_korisnika;
             this.id_igrice = id_igrice;

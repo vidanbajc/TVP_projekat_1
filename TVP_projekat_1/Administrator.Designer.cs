@@ -30,8 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Korisnici = new System.Windows.Forms.TabPage();
-            this.Igrice = new System.Windows.Forms.TabPage();
-            this.Izdavanje = new System.Windows.Forms.TabPage();
             this.lbl_vrsta_korisnika = new System.Windows.Forms.Label();
             this.lbl_lozinka = new System.Windows.Forms.Label();
             this.lbl_korisnicko_ime = new System.Windows.Forms.Label();
@@ -44,18 +42,19 @@
             this.tb_prezime = new System.Windows.Forms.TextBox();
             this.tb_ime = new System.Windows.Forms.TextBox();
             this.tb_id_korisnik = new System.Windows.Forms.TextBox();
-            this.odjava1 = new System.Windows.Forms.Button();
-            this.obrisi_korisnika = new System.Windows.Forms.Button();
-            this.izmeni_korisnika = new System.Windows.Forms.Button();
-            this.dodaj_korisnika = new System.Windows.Forms.Button();
+            this.btn_odjava1 = new System.Windows.Forms.Button();
+            this.btn_obrisi_korisnika = new System.Windows.Forms.Button();
+            this.btn_izmeni_korisnika = new System.Windows.Forms.Button();
+            this.btn_dodaj_korisnika = new System.Windows.Forms.Button();
             this.lbl_korisnik1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnicko_ime1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vrsta_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Igrice = new System.Windows.Forms.TabPage();
+            this.lbl_starosna_granica = new System.Windows.Forms.Label();
+            this.tb_starosna_granica = new System.Windows.Forms.TextBox();
+            this.lbl_broj_dostupnih_primeraka = new System.Windows.Forms.Label();
+            this.tb_broj_dostupnih_primeraka = new System.Windows.Forms.TextBox();
+            this.lbl_cena_izdavanja = new System.Windows.Forms.Label();
+            this.tb_cena_izdavanja = new System.Windows.Forms.TextBox();
             this.lbl_opis = new System.Windows.Forms.Label();
             this.lbl_platforma = new System.Windows.Forms.Label();
             this.lbl_godina_izdavanja = new System.Windows.Forms.Label();
@@ -70,26 +69,15 @@
             this.tb_naziv_studija = new System.Windows.Forms.TextBox();
             this.tb_naziv_igrice = new System.Windows.Forms.TextBox();
             this.tb_id_igrice = new System.Windows.Forms.TextBox();
-            this.odjava2 = new System.Windows.Forms.Button();
-            this.obrisi_igricu = new System.Windows.Forms.Button();
-            this.izmeni_igricu = new System.Windows.Forms.Button();
-            this.dodaj_igricu = new System.Windows.Forms.Button();
+            this.btn_odjava2 = new System.Windows.Forms.Button();
+            this.btn_obrisi_igricu = new System.Windows.Forms.Button();
+            this.btn_izmeni_igricu = new System.Windows.Forms.Button();
+            this.btn_dodaj_igricu = new System.Windows.Forms.Button();
             this.lbl_korisnik2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.id_destinacije = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drzava = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.popust = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.br_dana = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uk_mesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datum_polaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_cena_izdavanja = new System.Windows.Forms.Label();
-            this.tb_cena_izdavanja = new System.Windows.Forms.TextBox();
-            this.lbl_broj_dostupnih_primeraka = new System.Windows.Forms.Label();
-            this.tb_broj_dostupnih_primeraka = new System.Windows.Forms.TextBox();
-            this.lbl_starosna_granica = new System.Windows.Forms.Label();
-            this.tb_starosna_granica = new System.Windows.Forms.TextBox();
+            this.Izdavanje = new System.Windows.Forms.TabPage();
+            this.lbl_datum_vracanja = new System.Windows.Forms.Label();
+            this.dtp_datum_vracanja = new System.Windows.Forms.DateTimePicker();
             this.lbl_status_izdavanja = new System.Windows.Forms.Label();
             this.lbl_ukupna_cena = new System.Windows.Forms.Label();
             this.lbl_id_igrice_i = new System.Windows.Forms.Label();
@@ -98,25 +86,40 @@
             this.tb_ukupna_cena = new System.Windows.Forms.TextBox();
             this.tb_id_igrice_i = new System.Windows.Forms.TextBox();
             this.tb_id_korisnika_i = new System.Windows.Forms.TextBox();
-            this.odjava3 = new System.Windows.Forms.Button();
-            this.obrisi_izdavanje = new System.Windows.Forms.Button();
-            this.izmeni_izdavanje = new System.Windows.Forms.Button();
-            this.dodaj_izdavanje = new System.Windows.Forms.Button();
+            this.btn_odjava3 = new System.Windows.Forms.Button();
+            this.btn_obrisi_izdavanje = new System.Windows.Forms.Button();
+            this.btn_izmeni_izdavanje = new System.Windows.Forms.Button();
+            this.btn_dodaj_izdavanje = new System.Windows.Forms.Button();
             this.lbl_korisnik3 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.id_korisnika_r = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_destinacije_r = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uk_cena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.br_rezervisanih = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datum_vreme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_datum_vracanja = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.id_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnicko_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrsta_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_igrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naziv_igrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naziv_studija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zanr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.godina_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.platforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cena_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.broj_dostupnih_primeraka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.starosna_granica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_korisnika_i = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_igrice_i = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datum_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datum_vracanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ukupna_cena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Korisnici.SuspendLayout();
-            this.Igrice.SuspendLayout();
-            this.Izdavanje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Igrice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Izdavanje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,10 +149,10 @@
             this.Korisnici.Controls.Add(this.tb_prezime);
             this.Korisnici.Controls.Add(this.tb_ime);
             this.Korisnici.Controls.Add(this.tb_id_korisnik);
-            this.Korisnici.Controls.Add(this.odjava1);
-            this.Korisnici.Controls.Add(this.obrisi_korisnika);
-            this.Korisnici.Controls.Add(this.izmeni_korisnika);
-            this.Korisnici.Controls.Add(this.dodaj_korisnika);
+            this.Korisnici.Controls.Add(this.btn_odjava1);
+            this.Korisnici.Controls.Add(this.btn_obrisi_korisnika);
+            this.Korisnici.Controls.Add(this.btn_izmeni_korisnika);
+            this.Korisnici.Controls.Add(this.btn_dodaj_korisnika);
             this.Korisnici.Controls.Add(this.lbl_korisnik1);
             this.Korisnici.Controls.Add(this.dataGridView1);
             this.Korisnici.Location = new System.Drawing.Point(4, 22);
@@ -159,67 +162,6 @@
             this.Korisnici.TabIndex = 0;
             this.Korisnici.Text = "Korisnici";
             this.Korisnici.UseVisualStyleBackColor = true;
-            // 
-            // Igrice
-            // 
-            this.Igrice.Controls.Add(this.lbl_starosna_granica);
-            this.Igrice.Controls.Add(this.tb_starosna_granica);
-            this.Igrice.Controls.Add(this.lbl_broj_dostupnih_primeraka);
-            this.Igrice.Controls.Add(this.tb_broj_dostupnih_primeraka);
-            this.Igrice.Controls.Add(this.lbl_cena_izdavanja);
-            this.Igrice.Controls.Add(this.tb_cena_izdavanja);
-            this.Igrice.Controls.Add(this.lbl_opis);
-            this.Igrice.Controls.Add(this.lbl_platforma);
-            this.Igrice.Controls.Add(this.lbl_godina_izdavanja);
-            this.Igrice.Controls.Add(this.lbl_zanr);
-            this.Igrice.Controls.Add(this.lbl_naziv_studija);
-            this.Igrice.Controls.Add(this.lbl_naziv_igrice);
-            this.Igrice.Controls.Add(this.lbl_id_igrice);
-            this.Igrice.Controls.Add(this.tb_opis);
-            this.Igrice.Controls.Add(this.tb_platforma);
-            this.Igrice.Controls.Add(this.tb_godina_izdavanja);
-            this.Igrice.Controls.Add(this.tb_zanr);
-            this.Igrice.Controls.Add(this.tb_naziv_studija);
-            this.Igrice.Controls.Add(this.tb_naziv_igrice);
-            this.Igrice.Controls.Add(this.tb_id_igrice);
-            this.Igrice.Controls.Add(this.odjava2);
-            this.Igrice.Controls.Add(this.obrisi_igricu);
-            this.Igrice.Controls.Add(this.izmeni_igricu);
-            this.Igrice.Controls.Add(this.dodaj_igricu);
-            this.Igrice.Controls.Add(this.lbl_korisnik2);
-            this.Igrice.Controls.Add(this.dataGridView2);
-            this.Igrice.Location = new System.Drawing.Point(4, 22);
-            this.Igrice.Name = "Igrice";
-            this.Igrice.Padding = new System.Windows.Forms.Padding(3);
-            this.Igrice.Size = new System.Drawing.Size(556, 450);
-            this.Igrice.TabIndex = 1;
-            this.Igrice.Text = "Igrice";
-            this.Igrice.UseVisualStyleBackColor = true;
-            // 
-            // Izdavanje
-            // 
-            this.Izdavanje.Controls.Add(this.lbl_datum_vracanja);
-            this.Izdavanje.Controls.Add(this.dateTimePicker2);
-            this.Izdavanje.Controls.Add(this.lbl_status_izdavanja);
-            this.Izdavanje.Controls.Add(this.lbl_ukupna_cena);
-            this.Izdavanje.Controls.Add(this.lbl_id_igrice_i);
-            this.Izdavanje.Controls.Add(this.lbl_id_korisnika_i);
-            this.Izdavanje.Controls.Add(this.tb_status_izdavanja);
-            this.Izdavanje.Controls.Add(this.tb_ukupna_cena);
-            this.Izdavanje.Controls.Add(this.tb_id_igrice_i);
-            this.Izdavanje.Controls.Add(this.tb_id_korisnika_i);
-            this.Izdavanje.Controls.Add(this.odjava3);
-            this.Izdavanje.Controls.Add(this.obrisi_izdavanje);
-            this.Izdavanje.Controls.Add(this.izmeni_izdavanje);
-            this.Izdavanje.Controls.Add(this.dodaj_izdavanje);
-            this.Izdavanje.Controls.Add(this.lbl_korisnik3);
-            this.Izdavanje.Controls.Add(this.dataGridView3);
-            this.Izdavanje.Location = new System.Drawing.Point(4, 22);
-            this.Izdavanje.Name = "Izdavanje";
-            this.Izdavanje.Size = new System.Drawing.Size(556, 450);
-            this.Izdavanje.TabIndex = 2;
-            this.Izdavanje.Text = "Izdavanje";
-            this.Izdavanje.UseVisualStyleBackColor = true;
             // 
             // lbl_vrsta_korisnika
             // 
@@ -324,45 +266,46 @@
             this.tb_id_korisnik.Size = new System.Drawing.Size(100, 20);
             this.tb_id_korisnik.TabIndex = 56;
             // 
-            // odjava1
+            // btn_odjava1
             // 
-            this.odjava1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.odjava1.Location = new System.Drawing.Point(438, 314);
-            this.odjava1.Name = "odjava1";
-            this.odjava1.Size = new System.Drawing.Size(100, 40);
-            this.odjava1.TabIndex = 55;
-            this.odjava1.Text = "Odjavi se";
-            this.odjava1.UseVisualStyleBackColor = true;
+            this.btn_odjava1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_odjava1.Location = new System.Drawing.Point(438, 314);
+            this.btn_odjava1.Name = "btn_odjava1";
+            this.btn_odjava1.Size = new System.Drawing.Size(100, 40);
+            this.btn_odjava1.TabIndex = 55;
+            this.btn_odjava1.Text = "Odjavi se";
+            this.btn_odjava1.UseVisualStyleBackColor = true;
             // 
-            // obrisi_korisnika
+            // btn_obrisi_korisnika
             // 
-            this.obrisi_korisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.obrisi_korisnika.Location = new System.Drawing.Point(438, 268);
-            this.obrisi_korisnika.Name = "obrisi_korisnika";
-            this.obrisi_korisnika.Size = new System.Drawing.Size(100, 40);
-            this.obrisi_korisnika.TabIndex = 54;
-            this.obrisi_korisnika.Text = "Obrisi";
-            this.obrisi_korisnika.UseVisualStyleBackColor = true;
+            this.btn_obrisi_korisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_obrisi_korisnika.Location = new System.Drawing.Point(438, 268);
+            this.btn_obrisi_korisnika.Name = "btn_obrisi_korisnika";
+            this.btn_obrisi_korisnika.Size = new System.Drawing.Size(100, 40);
+            this.btn_obrisi_korisnika.TabIndex = 54;
+            this.btn_obrisi_korisnika.Text = "Obrisi";
+            this.btn_obrisi_korisnika.UseVisualStyleBackColor = true;
             // 
-            // izmeni_korisnika
+            // btn_izmeni_korisnika
             // 
-            this.izmeni_korisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.izmeni_korisnika.Location = new System.Drawing.Point(331, 314);
-            this.izmeni_korisnika.Name = "izmeni_korisnika";
-            this.izmeni_korisnika.Size = new System.Drawing.Size(100, 40);
-            this.izmeni_korisnika.TabIndex = 53;
-            this.izmeni_korisnika.Text = "Izmeni";
-            this.izmeni_korisnika.UseVisualStyleBackColor = true;
+            this.btn_izmeni_korisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_izmeni_korisnika.Location = new System.Drawing.Point(331, 314);
+            this.btn_izmeni_korisnika.Name = "btn_izmeni_korisnika";
+            this.btn_izmeni_korisnika.Size = new System.Drawing.Size(100, 40);
+            this.btn_izmeni_korisnika.TabIndex = 53;
+            this.btn_izmeni_korisnika.Text = "Izmeni";
+            this.btn_izmeni_korisnika.UseVisualStyleBackColor = true;
             // 
-            // dodaj_korisnika
+            // btn_dodaj_korisnika
             // 
-            this.dodaj_korisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dodaj_korisnika.Location = new System.Drawing.Point(331, 268);
-            this.dodaj_korisnika.Name = "dodaj_korisnika";
-            this.dodaj_korisnika.Size = new System.Drawing.Size(100, 40);
-            this.dodaj_korisnika.TabIndex = 52;
-            this.dodaj_korisnika.Text = "Dodaj";
-            this.dodaj_korisnika.UseVisualStyleBackColor = true;
+            this.btn_dodaj_korisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dodaj_korisnika.Location = new System.Drawing.Point(331, 268);
+            this.btn_dodaj_korisnika.Name = "btn_dodaj_korisnika";
+            this.btn_dodaj_korisnika.Size = new System.Drawing.Size(100, 40);
+            this.btn_dodaj_korisnika.TabIndex = 52;
+            this.btn_dodaj_korisnika.Text = "Dodaj";
+            this.btn_dodaj_korisnika.UseVisualStyleBackColor = true;
+            this.btn_dodaj_korisnika.Click += new System.EventHandler(this.btn_dodaj_korisnika_Click);
             // 
             // lbl_korisnik1
             // 
@@ -382,7 +325,7 @@
             this.id_korisnika,
             this.ime,
             this.prezime,
-            this.korisnicko_ime1,
+            this.korisnicko_ime,
             this.lozinka,
             this.vrsta_korisnika});
             this.dataGridView1.Location = new System.Drawing.Point(11, 38);
@@ -393,53 +336,92 @@
             this.dataGridView1.Size = new System.Drawing.Size(527, 168);
             this.dataGridView1.TabIndex = 50;
             // 
-            // id_korisnika
+            // Igrice
             // 
-            this.id_korisnika.DataPropertyName = "id_korisnika";
-            this.id_korisnika.HeaderText = "id";
-            this.id_korisnika.MinimumWidth = 6;
-            this.id_korisnika.Name = "id_korisnika";
-            this.id_korisnika.Width = 40;
+            this.Igrice.Controls.Add(this.lbl_starosna_granica);
+            this.Igrice.Controls.Add(this.tb_starosna_granica);
+            this.Igrice.Controls.Add(this.lbl_broj_dostupnih_primeraka);
+            this.Igrice.Controls.Add(this.tb_broj_dostupnih_primeraka);
+            this.Igrice.Controls.Add(this.lbl_cena_izdavanja);
+            this.Igrice.Controls.Add(this.tb_cena_izdavanja);
+            this.Igrice.Controls.Add(this.lbl_opis);
+            this.Igrice.Controls.Add(this.lbl_platforma);
+            this.Igrice.Controls.Add(this.lbl_godina_izdavanja);
+            this.Igrice.Controls.Add(this.lbl_zanr);
+            this.Igrice.Controls.Add(this.lbl_naziv_studija);
+            this.Igrice.Controls.Add(this.lbl_naziv_igrice);
+            this.Igrice.Controls.Add(this.lbl_id_igrice);
+            this.Igrice.Controls.Add(this.tb_opis);
+            this.Igrice.Controls.Add(this.tb_platforma);
+            this.Igrice.Controls.Add(this.tb_godina_izdavanja);
+            this.Igrice.Controls.Add(this.tb_zanr);
+            this.Igrice.Controls.Add(this.tb_naziv_studija);
+            this.Igrice.Controls.Add(this.tb_naziv_igrice);
+            this.Igrice.Controls.Add(this.tb_id_igrice);
+            this.Igrice.Controls.Add(this.btn_odjava2);
+            this.Igrice.Controls.Add(this.btn_obrisi_igricu);
+            this.Igrice.Controls.Add(this.btn_izmeni_igricu);
+            this.Igrice.Controls.Add(this.btn_dodaj_igricu);
+            this.Igrice.Controls.Add(this.lbl_korisnik2);
+            this.Igrice.Controls.Add(this.dataGridView2);
+            this.Igrice.Location = new System.Drawing.Point(4, 22);
+            this.Igrice.Name = "Igrice";
+            this.Igrice.Padding = new System.Windows.Forms.Padding(3);
+            this.Igrice.Size = new System.Drawing.Size(556, 450);
+            this.Igrice.TabIndex = 1;
+            this.Igrice.Text = "Igrice";
+            this.Igrice.UseVisualStyleBackColor = true;
             // 
-            // ime
+            // lbl_starosna_granica
             // 
-            this.ime.DataPropertyName = "ime";
-            this.ime.HeaderText = "ime";
-            this.ime.MinimumWidth = 6;
-            this.ime.Name = "ime";
-            this.ime.Width = 48;
+            this.lbl_starosna_granica.AutoSize = true;
+            this.lbl_starosna_granica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_starosna_granica.Location = new System.Drawing.Point(136, 398);
+            this.lbl_starosna_granica.Name = "lbl_starosna_granica";
+            this.lbl_starosna_granica.Size = new System.Drawing.Size(107, 16);
+            this.lbl_starosna_granica.TabIndex = 101;
+            this.lbl_starosna_granica.Text = "starosna granica";
             // 
-            // prezime
+            // tb_starosna_granica
             // 
-            this.prezime.DataPropertyName = "prezime";
-            this.prezime.HeaderText = "prezime";
-            this.prezime.MinimumWidth = 6;
-            this.prezime.Name = "prezime";
-            this.prezime.Width = 68;
+            this.tb_starosna_granica.Location = new System.Drawing.Point(139, 417);
+            this.tb_starosna_granica.Name = "tb_starosna_granica";
+            this.tb_starosna_granica.Size = new System.Drawing.Size(100, 20);
+            this.tb_starosna_granica.TabIndex = 100;
             // 
-            // korisnicko_ime1
+            // lbl_broj_dostupnih_primeraka
             // 
-            this.korisnicko_ime1.DataPropertyName = "korisnicko_ime1";
-            this.korisnicko_ime1.HeaderText = "korisnicko ime";
-            this.korisnicko_ime1.MinimumWidth = 6;
-            this.korisnicko_ime1.Name = "korisnicko_ime1";
-            this.korisnicko_ime1.Width = 99;
+            this.lbl_broj_dostupnih_primeraka.AutoSize = true;
+            this.lbl_broj_dostupnih_primeraka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_broj_dostupnih_primeraka.Location = new System.Drawing.Point(138, 356);
+            this.lbl_broj_dostupnih_primeraka.Name = "lbl_broj_dostupnih_primeraka";
+            this.lbl_broj_dostupnih_primeraka.Size = new System.Drawing.Size(94, 16);
+            this.lbl_broj_dostupnih_primeraka.TabIndex = 99;
+            this.lbl_broj_dostupnih_primeraka.Text = "broj primeraka";
             // 
-            // lozinka
+            // tb_broj_dostupnih_primeraka
             // 
-            this.lozinka.DataPropertyName = "lozinka";
-            this.lozinka.HeaderText = "lozinka";
-            this.lozinka.MinimumWidth = 6;
-            this.lozinka.Name = "lozinka";
-            this.lozinka.Width = 65;
+            this.tb_broj_dostupnih_primeraka.Location = new System.Drawing.Point(139, 375);
+            this.tb_broj_dostupnih_primeraka.Name = "tb_broj_dostupnih_primeraka";
+            this.tb_broj_dostupnih_primeraka.Size = new System.Drawing.Size(100, 20);
+            this.tb_broj_dostupnih_primeraka.TabIndex = 98;
             // 
-            // vrsta_korisnika
+            // lbl_cena_izdavanja
             // 
-            this.vrsta_korisnika.DataPropertyName = "vrsta_korisnika";
-            this.vrsta_korisnika.HeaderText = "vrsta";
-            this.vrsta_korisnika.MinimumWidth = 6;
-            this.vrsta_korisnika.Name = "vrsta_korisnika";
-            this.vrsta_korisnika.Width = 55;
+            this.lbl_cena_izdavanja.AutoSize = true;
+            this.lbl_cena_izdavanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cena_izdavanja.Location = new System.Drawing.Point(136, 314);
+            this.lbl_cena_izdavanja.Name = "lbl_cena_izdavanja";
+            this.lbl_cena_izdavanja.Size = new System.Drawing.Size(98, 16);
+            this.lbl_cena_izdavanja.TabIndex = 97;
+            this.lbl_cena_izdavanja.Text = "cena izdavanja";
+            // 
+            // tb_cena_izdavanja
+            // 
+            this.tb_cena_izdavanja.Location = new System.Drawing.Point(139, 333);
+            this.tb_cena_izdavanja.Name = "tb_cena_izdavanja";
+            this.tb_cena_izdavanja.Size = new System.Drawing.Size(100, 20);
+            this.tb_cena_izdavanja.TabIndex = 96;
             // 
             // lbl_opis
             // 
@@ -560,45 +542,46 @@
             this.tb_id_igrice.Size = new System.Drawing.Size(100, 20);
             this.tb_id_igrice.TabIndex = 80;
             // 
-            // odjava2
+            // btn_odjava2
             // 
-            this.odjava2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.odjava2.Location = new System.Drawing.Point(437, 314);
-            this.odjava2.Name = "odjava2";
-            this.odjava2.Size = new System.Drawing.Size(100, 40);
-            this.odjava2.TabIndex = 79;
-            this.odjava2.Text = "Odjavi se";
-            this.odjava2.UseVisualStyleBackColor = true;
+            this.btn_odjava2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_odjava2.Location = new System.Drawing.Point(437, 314);
+            this.btn_odjava2.Name = "btn_odjava2";
+            this.btn_odjava2.Size = new System.Drawing.Size(100, 40);
+            this.btn_odjava2.TabIndex = 79;
+            this.btn_odjava2.Text = "Odjavi se";
+            this.btn_odjava2.UseVisualStyleBackColor = true;
             // 
-            // obrisi_igricu
+            // btn_obrisi_igricu
             // 
-            this.obrisi_igricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.obrisi_igricu.Location = new System.Drawing.Point(437, 268);
-            this.obrisi_igricu.Name = "obrisi_igricu";
-            this.obrisi_igricu.Size = new System.Drawing.Size(100, 40);
-            this.obrisi_igricu.TabIndex = 78;
-            this.obrisi_igricu.Text = "Obrisi";
-            this.obrisi_igricu.UseVisualStyleBackColor = true;
+            this.btn_obrisi_igricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_obrisi_igricu.Location = new System.Drawing.Point(437, 268);
+            this.btn_obrisi_igricu.Name = "btn_obrisi_igricu";
+            this.btn_obrisi_igricu.Size = new System.Drawing.Size(100, 40);
+            this.btn_obrisi_igricu.TabIndex = 78;
+            this.btn_obrisi_igricu.Text = "Obrisi";
+            this.btn_obrisi_igricu.UseVisualStyleBackColor = true;
             // 
-            // izmeni_igricu
+            // btn_izmeni_igricu
             // 
-            this.izmeni_igricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.izmeni_igricu.Location = new System.Drawing.Point(331, 314);
-            this.izmeni_igricu.Name = "izmeni_igricu";
-            this.izmeni_igricu.Size = new System.Drawing.Size(100, 40);
-            this.izmeni_igricu.TabIndex = 77;
-            this.izmeni_igricu.Text = "Izmeni";
-            this.izmeni_igricu.UseVisualStyleBackColor = true;
+            this.btn_izmeni_igricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_izmeni_igricu.Location = new System.Drawing.Point(331, 314);
+            this.btn_izmeni_igricu.Name = "btn_izmeni_igricu";
+            this.btn_izmeni_igricu.Size = new System.Drawing.Size(100, 40);
+            this.btn_izmeni_igricu.TabIndex = 77;
+            this.btn_izmeni_igricu.Text = "Izmeni";
+            this.btn_izmeni_igricu.UseVisualStyleBackColor = true;
             // 
-            // dodaj_igricu
+            // btn_dodaj_igricu
             // 
-            this.dodaj_igricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dodaj_igricu.Location = new System.Drawing.Point(331, 268);
-            this.dodaj_igricu.Name = "dodaj_igricu";
-            this.dodaj_igricu.Size = new System.Drawing.Size(100, 40);
-            this.dodaj_igricu.TabIndex = 76;
-            this.dodaj_igricu.Text = "Dodaj";
-            this.dodaj_igricu.UseVisualStyleBackColor = true;
+            this.btn_dodaj_igricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dodaj_igricu.Location = new System.Drawing.Point(331, 268);
+            this.btn_dodaj_igricu.Name = "btn_dodaj_igricu";
+            this.btn_dodaj_igricu.Size = new System.Drawing.Size(100, 40);
+            this.btn_dodaj_igricu.TabIndex = 76;
+            this.btn_dodaj_igricu.Text = "Dodaj";
+            this.btn_dodaj_igricu.UseVisualStyleBackColor = true;
+            this.btn_dodaj_igricu.Click += new System.EventHandler(this.btn_dodaj_igricu_Click);
             // 
             // lbl_korisnik2
             // 
@@ -615,14 +598,16 @@
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_destinacije,
-            this.mesto,
-            this.drzava,
-            this.cena,
-            this.popust,
-            this.br_dana,
-            this.uk_mesta,
-            this.datum_polaska});
+            this.id_igrice,
+            this.naziv_igrice,
+            this.naziv_studija,
+            this.zanr,
+            this.godina_izdavanja,
+            this.platforma,
+            this.opis,
+            this.cena_izdavanja,
+            this.broj_dostupnih_primeraka,
+            this.starosna_granica});
             this.dataGridView2.Location = new System.Drawing.Point(12, 39);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
@@ -631,120 +616,49 @@
             this.dataGridView2.Size = new System.Drawing.Size(527, 168);
             this.dataGridView2.TabIndex = 74;
             // 
-            // id_destinacije
+            // Izdavanje
             // 
-            this.id_destinacije.DataPropertyName = "id_destinacije";
-            this.id_destinacije.HeaderText = "id";
-            this.id_destinacije.MinimumWidth = 6;
-            this.id_destinacije.Name = "id_destinacije";
-            this.id_destinacije.Width = 40;
+            this.Izdavanje.Controls.Add(this.lbl_datum_vracanja);
+            this.Izdavanje.Controls.Add(this.dtp_datum_vracanja);
+            this.Izdavanje.Controls.Add(this.lbl_status_izdavanja);
+            this.Izdavanje.Controls.Add(this.lbl_ukupna_cena);
+            this.Izdavanje.Controls.Add(this.lbl_id_igrice_i);
+            this.Izdavanje.Controls.Add(this.lbl_id_korisnika_i);
+            this.Izdavanje.Controls.Add(this.tb_status_izdavanja);
+            this.Izdavanje.Controls.Add(this.tb_ukupna_cena);
+            this.Izdavanje.Controls.Add(this.tb_id_igrice_i);
+            this.Izdavanje.Controls.Add(this.tb_id_korisnika_i);
+            this.Izdavanje.Controls.Add(this.btn_odjava3);
+            this.Izdavanje.Controls.Add(this.btn_obrisi_izdavanje);
+            this.Izdavanje.Controls.Add(this.btn_izmeni_izdavanje);
+            this.Izdavanje.Controls.Add(this.btn_dodaj_izdavanje);
+            this.Izdavanje.Controls.Add(this.lbl_korisnik3);
+            this.Izdavanje.Controls.Add(this.dataGridView3);
+            this.Izdavanje.Location = new System.Drawing.Point(4, 22);
+            this.Izdavanje.Name = "Izdavanje";
+            this.Izdavanje.Size = new System.Drawing.Size(556, 450);
+            this.Izdavanje.TabIndex = 2;
+            this.Izdavanje.Text = "Izdavanje";
+            this.Izdavanje.UseVisualStyleBackColor = true;
             // 
-            // mesto
+            // lbl_datum_vracanja
             // 
-            this.mesto.DataPropertyName = "mesto";
-            this.mesto.HeaderText = "mesto";
-            this.mesto.MinimumWidth = 6;
-            this.mesto.Name = "mesto";
-            this.mesto.Width = 60;
+            this.lbl_datum_vracanja.AutoSize = true;
+            this.lbl_datum_vracanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_datum_vracanja.Location = new System.Drawing.Point(9, 314);
+            this.lbl_datum_vracanja.Name = "lbl_datum_vracanja";
+            this.lbl_datum_vracanja.Size = new System.Drawing.Size(99, 16);
+            this.lbl_datum_vracanja.TabIndex = 107;
+            this.lbl_datum_vracanja.Text = "datum vracanja";
             // 
-            // drzava
+            // dtp_datum_vracanja
             // 
-            this.drzava.DataPropertyName = "drzava";
-            this.drzava.HeaderText = "drzava";
-            this.drzava.MinimumWidth = 6;
-            this.drzava.Name = "drzava";
-            this.drzava.Width = 64;
-            // 
-            // cena
-            // 
-            this.cena.DataPropertyName = "cena";
-            this.cena.HeaderText = "cena";
-            this.cena.MinimumWidth = 6;
-            this.cena.Name = "cena";
-            this.cena.Width = 56;
-            // 
-            // popust
-            // 
-            this.popust.DataPropertyName = "popust";
-            this.popust.HeaderText = "popust";
-            this.popust.MinimumWidth = 6;
-            this.popust.Name = "popust";
-            this.popust.Width = 64;
-            // 
-            // br_dana
-            // 
-            this.br_dana.DataPropertyName = "br_dana";
-            this.br_dana.HeaderText = "broj dana";
-            this.br_dana.MinimumWidth = 6;
-            this.br_dana.Name = "br_dana";
-            this.br_dana.Width = 76;
-            // 
-            // uk_mesta
-            // 
-            this.uk_mesta.DataPropertyName = "uk_mesta";
-            this.uk_mesta.HeaderText = "ukupno mesta";
-            this.uk_mesta.MinimumWidth = 6;
-            this.uk_mesta.Name = "uk_mesta";
-            this.uk_mesta.Width = 99;
-            // 
-            // datum_polaska
-            // 
-            this.datum_polaska.DataPropertyName = "datum_polaska";
-            this.datum_polaska.HeaderText = "datum";
-            this.datum_polaska.MinimumWidth = 6;
-            this.datum_polaska.Name = "datum_polaska";
-            this.datum_polaska.Width = 61;
-            // 
-            // lbl_cena_izdavanja
-            // 
-            this.lbl_cena_izdavanja.AutoSize = true;
-            this.lbl_cena_izdavanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cena_izdavanja.Location = new System.Drawing.Point(136, 314);
-            this.lbl_cena_izdavanja.Name = "lbl_cena_izdavanja";
-            this.lbl_cena_izdavanja.Size = new System.Drawing.Size(98, 16);
-            this.lbl_cena_izdavanja.TabIndex = 97;
-            this.lbl_cena_izdavanja.Text = "cena izdavanja";
-            // 
-            // tb_cena_izdavanja
-            // 
-            this.tb_cena_izdavanja.Location = new System.Drawing.Point(139, 333);
-            this.tb_cena_izdavanja.Name = "tb_cena_izdavanja";
-            this.tb_cena_izdavanja.Size = new System.Drawing.Size(100, 20);
-            this.tb_cena_izdavanja.TabIndex = 96;
-            // 
-            // lbl_broj_dostupnih_primeraka
-            // 
-            this.lbl_broj_dostupnih_primeraka.AutoSize = true;
-            this.lbl_broj_dostupnih_primeraka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_broj_dostupnih_primeraka.Location = new System.Drawing.Point(138, 356);
-            this.lbl_broj_dostupnih_primeraka.Name = "lbl_broj_dostupnih_primeraka";
-            this.lbl_broj_dostupnih_primeraka.Size = new System.Drawing.Size(94, 16);
-            this.lbl_broj_dostupnih_primeraka.TabIndex = 99;
-            this.lbl_broj_dostupnih_primeraka.Text = "broj primeraka";
-            // 
-            // tb_broj_dostupnih_primeraka
-            // 
-            this.tb_broj_dostupnih_primeraka.Location = new System.Drawing.Point(139, 375);
-            this.tb_broj_dostupnih_primeraka.Name = "tb_broj_dostupnih_primeraka";
-            this.tb_broj_dostupnih_primeraka.Size = new System.Drawing.Size(100, 20);
-            this.tb_broj_dostupnih_primeraka.TabIndex = 98;
-            // 
-            // lbl_starosna_granica
-            // 
-            this.lbl_starosna_granica.AutoSize = true;
-            this.lbl_starosna_granica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_starosna_granica.Location = new System.Drawing.Point(136, 398);
-            this.lbl_starosna_granica.Name = "lbl_starosna_granica";
-            this.lbl_starosna_granica.Size = new System.Drawing.Size(107, 16);
-            this.lbl_starosna_granica.TabIndex = 101;
-            this.lbl_starosna_granica.Text = "starosna granica";
-            // 
-            // tb_starosna_granica
-            // 
-            this.tb_starosna_granica.Location = new System.Drawing.Point(139, 417);
-            this.tb_starosna_granica.Name = "tb_starosna_granica";
-            this.tb_starosna_granica.Size = new System.Drawing.Size(100, 20);
-            this.tb_starosna_granica.TabIndex = 100;
+            this.dtp_datum_vracanja.CustomFormat = "dd.MM.yyyy";
+            this.dtp_datum_vracanja.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_datum_vracanja.Location = new System.Drawing.Point(12, 333);
+            this.dtp_datum_vracanja.Name = "dtp_datum_vracanja";
+            this.dtp_datum_vracanja.Size = new System.Drawing.Size(100, 20);
+            this.dtp_datum_vracanja.TabIndex = 106;
             // 
             // lbl_status_izdavanja
             // 
@@ -814,45 +728,45 @@
             this.tb_id_korisnika_i.Size = new System.Drawing.Size(100, 20);
             this.tb_id_korisnika_i.TabIndex = 98;
             // 
-            // odjava3
+            // btn_odjava3
             // 
-            this.odjava3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.odjava3.Location = new System.Drawing.Point(437, 314);
-            this.odjava3.Name = "odjava3";
-            this.odjava3.Size = new System.Drawing.Size(100, 40);
-            this.odjava3.TabIndex = 97;
-            this.odjava3.Text = "Odjavi se";
-            this.odjava3.UseVisualStyleBackColor = true;
+            this.btn_odjava3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_odjava3.Location = new System.Drawing.Point(437, 314);
+            this.btn_odjava3.Name = "btn_odjava3";
+            this.btn_odjava3.Size = new System.Drawing.Size(100, 40);
+            this.btn_odjava3.TabIndex = 97;
+            this.btn_odjava3.Text = "Odjavi se";
+            this.btn_odjava3.UseVisualStyleBackColor = true;
             // 
-            // obrisi_izdavanje
+            // btn_obrisi_izdavanje
             // 
-            this.obrisi_izdavanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.obrisi_izdavanje.Location = new System.Drawing.Point(437, 268);
-            this.obrisi_izdavanje.Name = "obrisi_izdavanje";
-            this.obrisi_izdavanje.Size = new System.Drawing.Size(100, 40);
-            this.obrisi_izdavanje.TabIndex = 96;
-            this.obrisi_izdavanje.Text = "Obrisi";
-            this.obrisi_izdavanje.UseVisualStyleBackColor = true;
+            this.btn_obrisi_izdavanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_obrisi_izdavanje.Location = new System.Drawing.Point(437, 268);
+            this.btn_obrisi_izdavanje.Name = "btn_obrisi_izdavanje";
+            this.btn_obrisi_izdavanje.Size = new System.Drawing.Size(100, 40);
+            this.btn_obrisi_izdavanje.TabIndex = 96;
+            this.btn_obrisi_izdavanje.Text = "Obrisi";
+            this.btn_obrisi_izdavanje.UseVisualStyleBackColor = true;
             // 
-            // izmeni_izdavanje
+            // btn_izmeni_izdavanje
             // 
-            this.izmeni_izdavanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.izmeni_izdavanje.Location = new System.Drawing.Point(331, 314);
-            this.izmeni_izdavanje.Name = "izmeni_izdavanje";
-            this.izmeni_izdavanje.Size = new System.Drawing.Size(100, 40);
-            this.izmeni_izdavanje.TabIndex = 95;
-            this.izmeni_izdavanje.Text = "Izmeni";
-            this.izmeni_izdavanje.UseVisualStyleBackColor = true;
+            this.btn_izmeni_izdavanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_izmeni_izdavanje.Location = new System.Drawing.Point(331, 314);
+            this.btn_izmeni_izdavanje.Name = "btn_izmeni_izdavanje";
+            this.btn_izmeni_izdavanje.Size = new System.Drawing.Size(100, 40);
+            this.btn_izmeni_izdavanje.TabIndex = 95;
+            this.btn_izmeni_izdavanje.Text = "Izmeni";
+            this.btn_izmeni_izdavanje.UseVisualStyleBackColor = true;
             // 
-            // dodaj_izdavanje
+            // btn_dodaj_izdavanje
             // 
-            this.dodaj_izdavanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dodaj_izdavanje.Location = new System.Drawing.Point(331, 268);
-            this.dodaj_izdavanje.Name = "dodaj_izdavanje";
-            this.dodaj_izdavanje.Size = new System.Drawing.Size(100, 40);
-            this.dodaj_izdavanje.TabIndex = 94;
-            this.dodaj_izdavanje.Text = "Dodaj";
-            this.dodaj_izdavanje.UseVisualStyleBackColor = true;
+            this.btn_dodaj_izdavanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dodaj_izdavanje.Location = new System.Drawing.Point(331, 268);
+            this.btn_dodaj_izdavanje.Name = "btn_dodaj_izdavanje";
+            this.btn_dodaj_izdavanje.Size = new System.Drawing.Size(100, 40);
+            this.btn_dodaj_izdavanje.TabIndex = 94;
+            this.btn_dodaj_izdavanje.Text = "Dodaj";
+            this.btn_dodaj_izdavanje.UseVisualStyleBackColor = true;
             // 
             // lbl_korisnik3
             // 
@@ -869,11 +783,12 @@
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_korisnika_r,
-            this.id_destinacije_r,
-            this.uk_cena,
-            this.br_rezervisanih,
-            this.datum_vreme});
+            this.id_korisnika_i,
+            this.id_igrice_i,
+            this.datum_izdavanja,
+            this.datum_vracanja,
+            this.ukupna_cena,
+            this.status_izdavanja});
             this.dataGridView3.Location = new System.Drawing.Point(12, 39);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
@@ -882,64 +797,176 @@
             this.dataGridView3.Size = new System.Drawing.Size(527, 168);
             this.dataGridView3.TabIndex = 92;
             // 
-            // id_korisnika_r
+            // id_korisnika
             // 
-            this.id_korisnika_r.DataPropertyName = "id_korisnika_r";
-            this.id_korisnika_r.HeaderText = "id korisnika";
-            this.id_korisnika_r.MinimumWidth = 6;
-            this.id_korisnika_r.Name = "id_korisnika_r";
-            this.id_korisnika_r.Width = 79;
+            this.id_korisnika.DataPropertyName = "id_korisnika";
+            this.id_korisnika.HeaderText = "id korisnika";
+            this.id_korisnika.MinimumWidth = 6;
+            this.id_korisnika.Name = "id_korisnika";
+            this.id_korisnika.Width = 85;
             // 
-            // id_destinacije_r
+            // ime
             // 
-            this.id_destinacije_r.DataPropertyName = "id_destinacije_r";
-            this.id_destinacije_r.HeaderText = "id destinacije";
-            this.id_destinacije_r.MinimumWidth = 6;
-            this.id_destinacije_r.Name = "id_destinacije_r";
-            this.id_destinacije_r.Width = 86;
+            this.ime.DataPropertyName = "ime";
+            this.ime.HeaderText = "ime";
+            this.ime.MinimumWidth = 6;
+            this.ime.Name = "ime";
+            this.ime.Width = 48;
             // 
-            // uk_cena
+            // prezime
             // 
-            this.uk_cena.DataPropertyName = "uk_cena";
-            this.uk_cena.HeaderText = "ukupna cena";
-            this.uk_cena.MinimumWidth = 6;
-            this.uk_cena.Name = "uk_cena";
-            this.uk_cena.Width = 88;
+            this.prezime.DataPropertyName = "prezime";
+            this.prezime.HeaderText = "prezime";
+            this.prezime.MinimumWidth = 6;
+            this.prezime.Name = "prezime";
+            this.prezime.Width = 68;
             // 
-            // br_rezervisanih
+            // korisnicko_ime
             // 
-            this.br_rezervisanih.DataPropertyName = "br_rezervisanih";
-            this.br_rezervisanih.HeaderText = "broj rezervisanih mesta";
-            this.br_rezervisanih.MinimumWidth = 6;
-            this.br_rezervisanih.Name = "br_rezervisanih";
-            this.br_rezervisanih.Width = 127;
+            this.korisnicko_ime.DataPropertyName = "korisnicko_ime";
+            this.korisnicko_ime.HeaderText = "korisnicko ime";
+            this.korisnicko_ime.MinimumWidth = 6;
+            this.korisnicko_ime.Name = "korisnicko_ime";
+            this.korisnicko_ime.Width = 99;
             // 
-            // datum_vreme
+            // lozinka
             // 
-            this.datum_vreme.DataPropertyName = "datum_vreme";
-            this.datum_vreme.HeaderText = "datum i vreme";
-            this.datum_vreme.MinimumWidth = 6;
-            this.datum_vreme.Name = "datum_vreme";
-            this.datum_vreme.Width = 90;
+            this.lozinka.DataPropertyName = "lozinka";
+            this.lozinka.HeaderText = "lozinka";
+            this.lozinka.MinimumWidth = 6;
+            this.lozinka.Name = "lozinka";
+            this.lozinka.Width = 65;
             // 
-            // lbl_datum_vracanja
+            // vrsta_korisnika
             // 
-            this.lbl_datum_vracanja.AutoSize = true;
-            this.lbl_datum_vracanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_datum_vracanja.Location = new System.Drawing.Point(9, 314);
-            this.lbl_datum_vracanja.Name = "lbl_datum_vracanja";
-            this.lbl_datum_vracanja.Size = new System.Drawing.Size(99, 16);
-            this.lbl_datum_vracanja.TabIndex = 107;
-            this.lbl_datum_vracanja.Text = "datum vracanja";
+            this.vrsta_korisnika.DataPropertyName = "vrsta_korisnika";
+            this.vrsta_korisnika.HeaderText = "vrsta korisnika";
+            this.vrsta_korisnika.MinimumWidth = 6;
+            this.vrsta_korisnika.Name = "vrsta_korisnika";
             // 
-            // dateTimePicker2
+            // id_igrice
             // 
-            this.dateTimePicker2.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(12, 333);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker2.TabIndex = 106;
+            this.id_igrice.DataPropertyName = "id_igrice";
+            this.id_igrice.HeaderText = "id igrice";
+            this.id_igrice.MinimumWidth = 6;
+            this.id_igrice.Name = "id_igrice";
+            this.id_igrice.Width = 68;
+            // 
+            // naziv_igrice
+            // 
+            this.naziv_igrice.DataPropertyName = "naziv_igrice";
+            this.naziv_igrice.HeaderText = "naziv igrice";
+            this.naziv_igrice.MinimumWidth = 6;
+            this.naziv_igrice.Name = "naziv_igrice";
+            this.naziv_igrice.Width = 85;
+            // 
+            // naziv_studija
+            // 
+            this.naziv_studija.DataPropertyName = "naziv_studija";
+            this.naziv_studija.HeaderText = "naziv studija";
+            this.naziv_studija.MinimumWidth = 6;
+            this.naziv_studija.Name = "naziv_studija";
+            this.naziv_studija.Width = 90;
+            // 
+            // zanr
+            // 
+            this.zanr.DataPropertyName = "zanr";
+            this.zanr.HeaderText = "zanr";
+            this.zanr.MinimumWidth = 6;
+            this.zanr.Name = "zanr";
+            this.zanr.Width = 52;
+            // 
+            // godina_izdavanja
+            // 
+            this.godina_izdavanja.DataPropertyName = "godina_izdavanja";
+            this.godina_izdavanja.HeaderText = "godina izdavanja";
+            this.godina_izdavanja.MinimumWidth = 6;
+            this.godina_izdavanja.Name = "godina_izdavanja";
+            this.godina_izdavanja.Width = 103;
+            // 
+            // platforma
+            // 
+            this.platforma.DataPropertyName = "platforma";
+            this.platforma.HeaderText = "platforma";
+            this.platforma.MinimumWidth = 6;
+            this.platforma.Name = "platforma";
+            this.platforma.Width = 75;
+            // 
+            // opis
+            // 
+            this.opis.DataPropertyName = "opis";
+            this.opis.HeaderText = "opis";
+            this.opis.MinimumWidth = 6;
+            this.opis.Name = "opis";
+            this.opis.Width = 51;
+            // 
+            // cena_izdavanja
+            // 
+            this.cena_izdavanja.DataPropertyName = "cena_izdavanja";
+            this.cena_izdavanja.HeaderText = "cena izdavanja";
+            this.cena_izdavanja.MinimumWidth = 6;
+            this.cena_izdavanja.Name = "cena_izdavanja";
+            this.cena_izdavanja.Width = 96;
+            // 
+            // broj_dostupnih_primeraka
+            // 
+            this.broj_dostupnih_primeraka.DataPropertyName = "broj_dostupnih_primeraka";
+            this.broj_dostupnih_primeraka.HeaderText = "broj dostupnih primeraka";
+            this.broj_dostupnih_primeraka.Name = "broj_dostupnih_primeraka";
+            this.broj_dostupnih_primeraka.Width = 134;
+            // 
+            // starosna_granica
+            // 
+            this.starosna_granica.DataPropertyName = "starosna_granica";
+            this.starosna_granica.HeaderText = "starosna granica";
+            this.starosna_granica.Name = "starosna_granica";
+            this.starosna_granica.Width = 101;
+            // 
+            // id_korisnika_i
+            // 
+            this.id_korisnika_i.DataPropertyName = "id_korisnika_i";
+            this.id_korisnika_i.HeaderText = "id korisnika";
+            this.id_korisnika_i.MinimumWidth = 6;
+            this.id_korisnika_i.Name = "id_korisnika_i";
+            this.id_korisnika_i.Width = 85;
+            // 
+            // id_igrice_i
+            // 
+            this.id_igrice_i.DataPropertyName = "id_igrice_i";
+            this.id_igrice_i.HeaderText = "id igrice";
+            this.id_igrice_i.MinimumWidth = 6;
+            this.id_igrice_i.Name = "id_igrice_i";
+            this.id_igrice_i.Width = 68;
+            // 
+            // datum_izdavanja
+            // 
+            this.datum_izdavanja.DataPropertyName = "datum_izdavanja";
+            this.datum_izdavanja.HeaderText = "datum izdavanja";
+            this.datum_izdavanja.MinimumWidth = 6;
+            this.datum_izdavanja.Name = "datum_izdavanja";
+            // 
+            // datum_vracanja
+            // 
+            this.datum_vracanja.DataPropertyName = "datum_vracanja";
+            this.datum_vracanja.HeaderText = "datum vracanja";
+            this.datum_vracanja.MinimumWidth = 6;
+            this.datum_vracanja.Name = "datum_vracanja";
+            this.datum_vracanja.Width = 97;
+            // 
+            // ukupna_cena
+            // 
+            this.ukupna_cena.DataPropertyName = "ukupna_cena";
+            this.ukupna_cena.HeaderText = "ukupna cena";
+            this.ukupna_cena.MinimumWidth = 6;
+            this.ukupna_cena.Name = "ukupna_cena";
+            this.ukupna_cena.Width = 88;
+            // 
+            // status_izdavanja
+            // 
+            this.status_izdavanja.DataPropertyName = "status_izdavanja";
+            this.status_izdavanja.HeaderText = "status izdavanja";
+            this.status_izdavanja.Name = "status_izdavanja";
+            this.status_izdavanja.Width = 99;
             // 
             // Administrator
             // 
@@ -949,15 +976,17 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Administrator";
             this.Text = "Administrator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Administrator_FormClosed);
+            this.Load += new System.EventHandler(this.Administrator_Load);
             this.tabControl1.ResumeLayout(false);
             this.Korisnici.ResumeLayout(false);
             this.Korisnici.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Igrice.ResumeLayout(false);
             this.Igrice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.Izdavanje.ResumeLayout(false);
             this.Izdavanje.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
@@ -981,18 +1010,12 @@
         private System.Windows.Forms.TextBox tb_prezime;
         private System.Windows.Forms.TextBox tb_ime;
         private System.Windows.Forms.TextBox tb_id_korisnik;
-        private System.Windows.Forms.Button odjava1;
-        private System.Windows.Forms.Button obrisi_korisnika;
-        private System.Windows.Forms.Button izmeni_korisnika;
-        private System.Windows.Forms.Button dodaj_korisnika;
+        private System.Windows.Forms.Button btn_odjava1;
+        private System.Windows.Forms.Button btn_obrisi_korisnika;
+        private System.Windows.Forms.Button btn_izmeni_korisnika;
+        private System.Windows.Forms.Button btn_dodaj_korisnika;
         private System.Windows.Forms.Label lbl_korisnik1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_korisnika;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn korisnicko_ime1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lozinka;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vrsta_korisnika;
         private System.Windows.Forms.Label lbl_cena_izdavanja;
         private System.Windows.Forms.TextBox tb_cena_izdavanja;
         private System.Windows.Forms.Label lbl_opis;
@@ -1009,20 +1032,12 @@
         private System.Windows.Forms.TextBox tb_naziv_studija;
         private System.Windows.Forms.TextBox tb_naziv_igrice;
         private System.Windows.Forms.TextBox tb_id_igrice;
-        private System.Windows.Forms.Button odjava2;
-        private System.Windows.Forms.Button obrisi_igricu;
-        private System.Windows.Forms.Button izmeni_igricu;
-        private System.Windows.Forms.Button dodaj_igricu;
+        private System.Windows.Forms.Button btn_odjava2;
+        private System.Windows.Forms.Button btn_obrisi_igricu;
+        private System.Windows.Forms.Button btn_izmeni_igricu;
+        private System.Windows.Forms.Button btn_dodaj_igricu;
         private System.Windows.Forms.Label lbl_korisnik2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_destinacije;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mesto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn drzava;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cena;
-        private System.Windows.Forms.DataGridViewTextBoxColumn popust;
-        private System.Windows.Forms.DataGridViewTextBoxColumn br_dana;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uk_mesta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datum_polaska;
         private System.Windows.Forms.Label lbl_starosna_granica;
         private System.Windows.Forms.TextBox tb_starosna_granica;
         private System.Windows.Forms.Label lbl_broj_dostupnih_primeraka;
@@ -1035,18 +1050,35 @@
         private System.Windows.Forms.TextBox tb_ukupna_cena;
         private System.Windows.Forms.TextBox tb_id_igrice_i;
         private System.Windows.Forms.TextBox tb_id_korisnika_i;
-        private System.Windows.Forms.Button odjava3;
-        private System.Windows.Forms.Button obrisi_izdavanje;
-        private System.Windows.Forms.Button izmeni_izdavanje;
-        private System.Windows.Forms.Button dodaj_izdavanje;
+        private System.Windows.Forms.Button btn_odjava3;
+        private System.Windows.Forms.Button btn_obrisi_izdavanje;
+        private System.Windows.Forms.Button btn_izmeni_izdavanje;
+        private System.Windows.Forms.Button btn_dodaj_izdavanje;
         private System.Windows.Forms.Label lbl_korisnik3;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_korisnika_r;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_destinacije_r;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uk_cena;
-        private System.Windows.Forms.DataGridViewTextBoxColumn br_rezervisanih;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datum_vreme;
         private System.Windows.Forms.Label lbl_datum_vracanja;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_datum_vracanja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_korisnika;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korisnicko_ime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lozinka;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vrsta_korisnika;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_igrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naziv_igrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naziv_studija;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zanr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn godina_izdavanja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn platforma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cena_izdavanja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn broj_dostupnih_primeraka;
+        private System.Windows.Forms.DataGridViewTextBoxColumn starosna_granica;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_korisnika_i;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_igrice_i;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datum_izdavanja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datum_vracanja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ukupna_cena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_izdavanja;
     }
 }
