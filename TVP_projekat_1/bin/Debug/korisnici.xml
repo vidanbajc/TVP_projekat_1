@@ -36,8 +36,16 @@
     <Id_korisnika>5</Id_korisnika>
     <Ime>c</Ime>
     <Prezime>c</Prezime>
-    <Korisnicko_ime>c</Korisnicko_ime>
+    <Korisnicko_ime>cc</Korisnicko_ime>
     <Lozinka>c</Lozinka>
     <Vrsta_korisnika>admin</Vrsta_korisnika>
+  </Korisnik>
+  <Korisnik>
+    <Id_korisnika>6</Id_korisnika>
+    <Ime>s</Ime>
+    <Prezime>s</Prezime>
+    <Korisnicko_ime>aa</Korisnicko_ime>
+    <Lozinka>s</Lozinka>
+    <Vrsta_korisnika>klijent</Vrsta_korisnika>
   </Korisnik>
 </ArrayOfKorisnik>

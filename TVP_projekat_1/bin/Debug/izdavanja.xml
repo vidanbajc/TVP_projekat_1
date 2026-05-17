@@ -8,4 +8,20 @@
     <Ukupna_cena>4000</Ukupna_cena>
     <Status_izdavanja>aktivno</Status_izdavanja>
   </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>1</Id_korisnika>
+    <Id_igrice>2</Id_igrice>
+    <Datum_izdavanja>2026-05-17T11:17:11.0711585+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-17T00:00:00</Datum_vracanja>
+    <Ukupna_cena>4</Ukupna_cena>
+    <Status_izdavanja>aktivno</Status_izdavanja>
+  </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>2</Id_korisnika>
+    <Id_igrice>1</Id_igrice>
+    <Datum_izdavanja>2026-05-17T13:12:40.6091732+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-22T00:00:00</Datum_vracanja>
+    <Ukupna_cena>10000</Ukupna_cena>
+    <Status_izdavanja>vraceno</Status_izdavanja>
+  </Izdavanje>
 </ArrayOfIzdavanje>

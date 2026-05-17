@@ -85,7 +85,7 @@ namespace TVP_projekat_1
 
             if(!File.Exists("izdavanja.xml"))
             {
-                izdavanja.Add(new Izdavanje(1, 1, new DateTime(2026,5,16), new DateTime(2026, 5, 26), 4000, "aktivno"));
+                izdavanja.Add(new Izdavanje(1, 1, new DateTime(2026, 5, 16, 14, 30, 0), new DateTime(2026, 5, 26), 4000, "aktivno"));
             }
         }
 

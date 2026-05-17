@@ -48,6 +48,12 @@
             this.btn_dodaj_korisnika = new System.Windows.Forms.Button();
             this.lbl_korisnik1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnicko_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrsta_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Igrice = new System.Windows.Forms.TabPage();
             this.lbl_starosna_granica = new System.Windows.Forms.Label();
             this.tb_starosna_granica = new System.Windows.Forms.TextBox();
@@ -75,6 +81,16 @@
             this.btn_dodaj_igricu = new System.Windows.Forms.Button();
             this.lbl_korisnik2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.id_igrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naziv_igrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naziv_studija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zanr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.godina_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.platforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cena_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.broj_dostupnih_primeraka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.starosna_granica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Izdavanje = new System.Windows.Forms.TabPage();
             this.lbl_datum_vracanja = new System.Windows.Forms.Label();
             this.dtp_datum_vracanja = new System.Windows.Forms.DateTimePicker();
@@ -92,22 +108,6 @@
             this.btn_dodaj_izdavanje = new System.Windows.Forms.Button();
             this.lbl_korisnik3 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.id_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnicko_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vrsta_korisnika = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_igrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.naziv_igrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.naziv_studija = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zanr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.godina_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.platforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cena_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.broj_dostupnih_primeraka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.starosna_granica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_korisnika_i = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_igrice_i = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datum_izdavanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -269,7 +269,7 @@
             // btn_odjava1
             // 
             this.btn_odjava1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_odjava1.Location = new System.Drawing.Point(438, 314);
+            this.btn_odjava1.Location = new System.Drawing.Point(437, 314);
             this.btn_odjava1.Name = "btn_odjava1";
             this.btn_odjava1.Size = new System.Drawing.Size(100, 40);
             this.btn_odjava1.TabIndex = 55;
@@ -279,7 +279,7 @@
             // btn_obrisi_korisnika
             // 
             this.btn_obrisi_korisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_obrisi_korisnika.Location = new System.Drawing.Point(438, 268);
+            this.btn_obrisi_korisnika.Location = new System.Drawing.Point(437, 268);
             this.btn_obrisi_korisnika.Name = "btn_obrisi_korisnika";
             this.btn_obrisi_korisnika.Size = new System.Drawing.Size(100, 40);
             this.btn_obrisi_korisnika.TabIndex = 54;
@@ -295,6 +295,7 @@
             this.btn_izmeni_korisnika.TabIndex = 53;
             this.btn_izmeni_korisnika.Text = "Izmeni";
             this.btn_izmeni_korisnika.UseVisualStyleBackColor = true;
+            this.btn_izmeni_korisnika.Click += new System.EventHandler(this.btn_izmeni_korisnika_Click);
             // 
             // btn_dodaj_korisnika
             // 
@@ -335,6 +336,54 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(527, 168);
             this.dataGridView1.TabIndex = 50;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // id_korisnika
+            // 
+            this.id_korisnika.DataPropertyName = "id_korisnika";
+            this.id_korisnika.HeaderText = "id korisnika";
+            this.id_korisnika.MinimumWidth = 6;
+            this.id_korisnika.Name = "id_korisnika";
+            this.id_korisnika.Width = 85;
+            // 
+            // ime
+            // 
+            this.ime.DataPropertyName = "ime";
+            this.ime.HeaderText = "ime";
+            this.ime.MinimumWidth = 6;
+            this.ime.Name = "ime";
+            this.ime.Width = 48;
+            // 
+            // prezime
+            // 
+            this.prezime.DataPropertyName = "prezime";
+            this.prezime.HeaderText = "prezime";
+            this.prezime.MinimumWidth = 6;
+            this.prezime.Name = "prezime";
+            this.prezime.Width = 68;
+            // 
+            // korisnicko_ime
+            // 
+            this.korisnicko_ime.DataPropertyName = "korisnicko_ime";
+            this.korisnicko_ime.HeaderText = "korisnicko ime";
+            this.korisnicko_ime.MinimumWidth = 6;
+            this.korisnicko_ime.Name = "korisnicko_ime";
+            this.korisnicko_ime.Width = 99;
+            // 
+            // lozinka
+            // 
+            this.lozinka.DataPropertyName = "lozinka";
+            this.lozinka.HeaderText = "lozinka";
+            this.lozinka.MinimumWidth = 6;
+            this.lozinka.Name = "lozinka";
+            this.lozinka.Width = 65;
+            // 
+            // vrsta_korisnika
+            // 
+            this.vrsta_korisnika.DataPropertyName = "vrsta_korisnika";
+            this.vrsta_korisnika.HeaderText = "vrsta korisnika";
+            this.vrsta_korisnika.MinimumWidth = 6;
+            this.vrsta_korisnika.Name = "vrsta_korisnika";
             // 
             // Igrice
             // 
@@ -571,6 +620,7 @@
             this.btn_izmeni_igricu.TabIndex = 77;
             this.btn_izmeni_igricu.Text = "Izmeni";
             this.btn_izmeni_igricu.UseVisualStyleBackColor = true;
+            this.btn_izmeni_igricu.Click += new System.EventHandler(this.btn_izmeni_igricu_Click);
             // 
             // btn_dodaj_igricu
             // 
@@ -615,6 +665,85 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(527, 168);
             this.dataGridView2.TabIndex = 74;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
+            // 
+            // id_igrice
+            // 
+            this.id_igrice.DataPropertyName = "id_igrice";
+            this.id_igrice.HeaderText = "id igrice";
+            this.id_igrice.MinimumWidth = 6;
+            this.id_igrice.Name = "id_igrice";
+            this.id_igrice.Width = 63;
+            // 
+            // naziv_igrice
+            // 
+            this.naziv_igrice.DataPropertyName = "naziv_igrice";
+            this.naziv_igrice.HeaderText = "naziv igrice";
+            this.naziv_igrice.MinimumWidth = 6;
+            this.naziv_igrice.Name = "naziv_igrice";
+            this.naziv_igrice.Width = 79;
+            // 
+            // naziv_studija
+            // 
+            this.naziv_studija.DataPropertyName = "naziv_studija";
+            this.naziv_studija.HeaderText = "naziv studija";
+            this.naziv_studija.MinimumWidth = 6;
+            this.naziv_studija.Name = "naziv_studija";
+            this.naziv_studija.Width = 83;
+            // 
+            // zanr
+            // 
+            this.zanr.DataPropertyName = "zanr";
+            this.zanr.HeaderText = "zanr";
+            this.zanr.MinimumWidth = 6;
+            this.zanr.Name = "zanr";
+            this.zanr.Width = 52;
+            // 
+            // godina_izdavanja
+            // 
+            this.godina_izdavanja.DataPropertyName = "godina_izdavanja";
+            this.godina_izdavanja.HeaderText = "godina izdavanja";
+            this.godina_izdavanja.MinimumWidth = 6;
+            this.godina_izdavanja.Name = "godina_izdavanja";
+            this.godina_izdavanja.Width = 103;
+            // 
+            // platforma
+            // 
+            this.platforma.DataPropertyName = "platforma";
+            this.platforma.HeaderText = "platforma";
+            this.platforma.MinimumWidth = 6;
+            this.platforma.Name = "platforma";
+            this.platforma.Width = 75;
+            // 
+            // opis
+            // 
+            this.opis.DataPropertyName = "opis";
+            this.opis.HeaderText = "opis";
+            this.opis.MinimumWidth = 6;
+            this.opis.Name = "opis";
+            this.opis.Width = 51;
+            // 
+            // cena_izdavanja
+            // 
+            this.cena_izdavanja.DataPropertyName = "cena_izdavanja";
+            this.cena_izdavanja.HeaderText = "cena izdavanja";
+            this.cena_izdavanja.MinimumWidth = 6;
+            this.cena_izdavanja.Name = "cena_izdavanja";
+            this.cena_izdavanja.Width = 96;
+            // 
+            // broj_dostupnih_primeraka
+            // 
+            this.broj_dostupnih_primeraka.DataPropertyName = "broj_dostupnih_primeraka";
+            this.broj_dostupnih_primeraka.HeaderText = "broj dostupnih primeraka";
+            this.broj_dostupnih_primeraka.Name = "broj_dostupnih_primeraka";
+            this.broj_dostupnih_primeraka.Width = 134;
+            // 
+            // starosna_granica
+            // 
+            this.starosna_granica.DataPropertyName = "starosna_granica";
+            this.starosna_granica.HeaderText = "starosna granica";
+            this.starosna_granica.Name = "starosna_granica";
+            this.starosna_granica.Width = 101;
             // 
             // Izdavanje
             // 
@@ -757,6 +886,7 @@
             this.btn_izmeni_izdavanje.TabIndex = 95;
             this.btn_izmeni_izdavanje.Text = "Izmeni";
             this.btn_izmeni_izdavanje.UseVisualStyleBackColor = true;
+            this.btn_izmeni_izdavanje.Click += new System.EventHandler(this.btn_izmeni_izdavanje_Click);
             // 
             // btn_dodaj_izdavanje
             // 
@@ -767,6 +897,7 @@
             this.btn_dodaj_izdavanje.TabIndex = 94;
             this.btn_dodaj_izdavanje.Text = "Dodaj";
             this.btn_dodaj_izdavanje.UseVisualStyleBackColor = true;
+            this.btn_dodaj_izdavanje.Click += new System.EventHandler(this.btn_dodaj_izdavanje_Click);
             // 
             // lbl_korisnik3
             // 
@@ -796,135 +927,11 @@
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(527, 168);
             this.dataGridView3.TabIndex = 92;
-            // 
-            // id_korisnika
-            // 
-            this.id_korisnika.DataPropertyName = "id_korisnika";
-            this.id_korisnika.HeaderText = "id korisnika";
-            this.id_korisnika.MinimumWidth = 6;
-            this.id_korisnika.Name = "id_korisnika";
-            this.id_korisnika.Width = 85;
-            // 
-            // ime
-            // 
-            this.ime.DataPropertyName = "ime";
-            this.ime.HeaderText = "ime";
-            this.ime.MinimumWidth = 6;
-            this.ime.Name = "ime";
-            this.ime.Width = 48;
-            // 
-            // prezime
-            // 
-            this.prezime.DataPropertyName = "prezime";
-            this.prezime.HeaderText = "prezime";
-            this.prezime.MinimumWidth = 6;
-            this.prezime.Name = "prezime";
-            this.prezime.Width = 68;
-            // 
-            // korisnicko_ime
-            // 
-            this.korisnicko_ime.DataPropertyName = "korisnicko_ime";
-            this.korisnicko_ime.HeaderText = "korisnicko ime";
-            this.korisnicko_ime.MinimumWidth = 6;
-            this.korisnicko_ime.Name = "korisnicko_ime";
-            this.korisnicko_ime.Width = 99;
-            // 
-            // lozinka
-            // 
-            this.lozinka.DataPropertyName = "lozinka";
-            this.lozinka.HeaderText = "lozinka";
-            this.lozinka.MinimumWidth = 6;
-            this.lozinka.Name = "lozinka";
-            this.lozinka.Width = 65;
-            // 
-            // vrsta_korisnika
-            // 
-            this.vrsta_korisnika.DataPropertyName = "vrsta_korisnika";
-            this.vrsta_korisnika.HeaderText = "vrsta korisnika";
-            this.vrsta_korisnika.MinimumWidth = 6;
-            this.vrsta_korisnika.Name = "vrsta_korisnika";
-            // 
-            // id_igrice
-            // 
-            this.id_igrice.DataPropertyName = "id_igrice";
-            this.id_igrice.HeaderText = "id igrice";
-            this.id_igrice.MinimumWidth = 6;
-            this.id_igrice.Name = "id_igrice";
-            this.id_igrice.Width = 68;
-            // 
-            // naziv_igrice
-            // 
-            this.naziv_igrice.DataPropertyName = "naziv_igrice";
-            this.naziv_igrice.HeaderText = "naziv igrice";
-            this.naziv_igrice.MinimumWidth = 6;
-            this.naziv_igrice.Name = "naziv_igrice";
-            this.naziv_igrice.Width = 85;
-            // 
-            // naziv_studija
-            // 
-            this.naziv_studija.DataPropertyName = "naziv_studija";
-            this.naziv_studija.HeaderText = "naziv studija";
-            this.naziv_studija.MinimumWidth = 6;
-            this.naziv_studija.Name = "naziv_studija";
-            this.naziv_studija.Width = 90;
-            // 
-            // zanr
-            // 
-            this.zanr.DataPropertyName = "zanr";
-            this.zanr.HeaderText = "zanr";
-            this.zanr.MinimumWidth = 6;
-            this.zanr.Name = "zanr";
-            this.zanr.Width = 52;
-            // 
-            // godina_izdavanja
-            // 
-            this.godina_izdavanja.DataPropertyName = "godina_izdavanja";
-            this.godina_izdavanja.HeaderText = "godina izdavanja";
-            this.godina_izdavanja.MinimumWidth = 6;
-            this.godina_izdavanja.Name = "godina_izdavanja";
-            this.godina_izdavanja.Width = 103;
-            // 
-            // platforma
-            // 
-            this.platforma.DataPropertyName = "platforma";
-            this.platforma.HeaderText = "platforma";
-            this.platforma.MinimumWidth = 6;
-            this.platforma.Name = "platforma";
-            this.platforma.Width = 75;
-            // 
-            // opis
-            // 
-            this.opis.DataPropertyName = "opis";
-            this.opis.HeaderText = "opis";
-            this.opis.MinimumWidth = 6;
-            this.opis.Name = "opis";
-            this.opis.Width = 51;
-            // 
-            // cena_izdavanja
-            // 
-            this.cena_izdavanja.DataPropertyName = "cena_izdavanja";
-            this.cena_izdavanja.HeaderText = "cena izdavanja";
-            this.cena_izdavanja.MinimumWidth = 6;
-            this.cena_izdavanja.Name = "cena_izdavanja";
-            this.cena_izdavanja.Width = 96;
-            // 
-            // broj_dostupnih_primeraka
-            // 
-            this.broj_dostupnih_primeraka.DataPropertyName = "broj_dostupnih_primeraka";
-            this.broj_dostupnih_primeraka.HeaderText = "broj dostupnih primeraka";
-            this.broj_dostupnih_primeraka.Name = "broj_dostupnih_primeraka";
-            this.broj_dostupnih_primeraka.Width = 134;
-            // 
-            // starosna_granica
-            // 
-            this.starosna_granica.DataPropertyName = "starosna_granica";
-            this.starosna_granica.HeaderText = "starosna granica";
-            this.starosna_granica.Name = "starosna_granica";
-            this.starosna_granica.Width = 101;
+            this.dataGridView3.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
             // id_korisnika_i
             // 
-            this.id_korisnika_i.DataPropertyName = "id_korisnika_i";
+            this.id_korisnika_i.DataPropertyName = "id_korisnika";
             this.id_korisnika_i.HeaderText = "id korisnika";
             this.id_korisnika_i.MinimumWidth = 6;
             this.id_korisnika_i.Name = "id_korisnika_i";
@@ -932,7 +939,7 @@
             // 
             // id_igrice_i
             // 
-            this.id_igrice_i.DataPropertyName = "id_igrice_i";
+            this.id_igrice_i.DataPropertyName = "id_igrice";
             this.id_igrice_i.HeaderText = "id igrice";
             this.id_igrice_i.MinimumWidth = 6;
             this.id_igrice_i.Name = "id_igrice_i";

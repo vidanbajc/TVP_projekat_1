@@ -19,6 +19,21 @@ namespace TVP_projekat_1
             Podaci.Ucitaj();
         }
 
+        public static void Ocisti(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                if (c is TextBox tb)
+                    tb.Clear();
+
+                if (c is DateTimePicker dtp)
+                    dtp.ResetText();
+
+                if (c.HasChildren)
+                    Ocisti(c);
+            }
+        }
+
         private void btn_prijava_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tb_korisnicko_ime.Text))
@@ -32,8 +47,7 @@ namespace TVP_projekat_1
                 string korisnicko_ime = tb_korisnicko_ime.Text;
                 string lozinka = tb_lozinka.Text;
 
-                Korisnik nadjen = null;
-                nadjen = Podaci.Korisnici.FirstOrDefault(k => k.Korisnicko_ime == korisnicko_ime && k.Lozinka == lozinka);
+                Korisnik nadjen = Podaci.Korisnici.FirstOrDefault(k => k.Korisnicko_ime == korisnicko_ime && k.Lozinka == lozinka);
 
                 if (nadjen == null)
                     MessageBox.Show("Uneli ste nepostojeceg korisnika, pokusajte ponovo", "Upozorenje", MessageBoxButtons.OK);
@@ -44,8 +58,7 @@ namespace TVP_projekat_1
                     Administrator admin = new Administrator(this, nadjen);
                     admin.Show();
 
-                    tb_korisnicko_ime.Clear();
-                    tb_lozinka.Clear();
+                    Ocisti(this);
                     this.Hide();
                 }
 
@@ -55,8 +68,7 @@ namespace TVP_projekat_1
                     Klijent klijent = new Klijent(this, nadjen);
                     klijent.Show();
 
-                    tb_korisnicko_ime.Clear();
-                    tb_lozinka.Clear();
+                    Ocisti(this);
                     this.Hide();
                 }
             }
