@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Igrica.cs" />
     <Compile Include="Izdavanje.cs" />
+    <Compile Include="IznajmljivanjeIgrica.cs" />
     <Compile Include="Klijent.cs">
       <SubType>Form</SubType>
     </Compile>

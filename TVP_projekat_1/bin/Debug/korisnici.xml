@@ -36,7 +36,7 @@
     <Id_korisnika>6</Id_korisnika>
     <Ime>s</Ime>
     <Prezime>s</Prezime>
-    <Korisnicko_ime>aa</Korisnicko_ime>
+    <Korisnicko_ime>s</Korisnicko_ime>
     <Lozinka>s</Lozinka>
     <Vrsta_korisnika>klijent</Vrsta_korisnika>
   </Korisnik>

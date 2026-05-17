@@ -32,4 +32,36 @@
     <Ukupna_cena>30000</Ukupna_cena>
     <Status_izdavanja>aktivno</Status_izdavanja>
   </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>6</Id_korisnika>
+    <Id_igrice>3</Id_igrice>
+    <Datum_izdavanja>2026-05-17T21:37:36.1708554+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
+    <Ukupna_cena>30000</Ukupna_cena>
+    <Status_izdavanja>aktivno</Status_izdavanja>
+  </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>6</Id_korisnika>
+    <Id_igrice>2</Id_igrice>
+    <Datum_izdavanja>2026-05-17T21:37:48.4463481+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
+    <Ukupna_cena>25000</Ukupna_cena>
+    <Status_izdavanja>vraceno</Status_izdavanja>
+  </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>6</Id_korisnika>
+    <Id_igrice>1</Id_igrice>
+    <Datum_izdavanja>2026-05-17T21:37:57.2736212+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
+    <Ukupna_cena>20000</Ukupna_cena>
+    <Status_izdavanja>aktivno</Status_izdavanja>
+  </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>6</Id_korisnika>
+    <Id_igrice>2</Id_igrice>
+    <Datum_izdavanja>2026-05-17T21:38:05.7305692+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
+    <Ukupna_cena>25000</Ukupna_cena>
+    <Status_izdavanja>aktivno</Status_izdavanja>
+  </Izdavanje>
 </ArrayOfIzdavanje>
