@@ -154,12 +154,6 @@ namespace TVP_projekat_1
 
         private void btn_dodaj_izdavanje_Click(object sender, EventArgs e)
         {
-            // videti po pitanju statusa da li uopste moze da se doda izdavanje,
-            // a da status bude vraceno
-
-            // isto oko izmene, ako neko ranije vrati nego sto je rezervisao,
-            // da li mu se smanjuje cena i to
-            // mada je to vec prica za Klijenta, ako se uopste zahteva
             if (string.IsNullOrEmpty(tb_id_korisnika_i.Text) ||
                 string.IsNullOrEmpty(tb_id_igrice_i.Text) ||
                 string.IsNullOrEmpty(tb_status_izdavanja.Text))
@@ -182,6 +176,16 @@ namespace TVP_projekat_1
                 if (korisnik == null || igrica == null)
                 {
                     MessageBox.Show("Morate uneti id postojeceg korisnika i igrice!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                Izdavanje izdavanje = Podaci.Izdavanja.FirstOrDefault(i => i.Id_korisnika == korisnik.Id_korisnika && 
+                                                                           i.Id_igrice == igrica.Id_igrice &&
+                                                                           i.Status_izdavanja == "aktivno");
+
+                if(izdavanje != null)
+                {
+                    MessageBox.Show("Korisnik ne moze da iznajmi igricu dok mu je status iznajmljivanja za istu aktivan!", "Upozorenje", MessageBoxButtons.OK);
                     return;
                 }
 
@@ -220,7 +224,7 @@ namespace TVP_projekat_1
             }
 
             else if(dataGridView1.CurrentRow == null || string.IsNullOrWhiteSpace(tb_id_korisnik.Text))
-                MessageBox.Show("Morate selektovati korisnika koga zelite da izmenite", "Upozorenje", MessageBoxButtons.OK);
+                MessageBox.Show("Morate selektovati korisnika koga zelite da izmenite!", "Upozorenje", MessageBoxButtons.OK);
 
             else
             {
@@ -280,7 +284,9 @@ namespace TVP_projekat_1
                 Podaci.Sacuvaj();
 
                 dataGridView1.DataSource = null;
+                dataGridView1.SelectionChanged -= dataGridView1_SelectionChanged;
                 dataGridView1.DataSource = Podaci.Korisnici;
+                dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
 
                 MessageBox.Show("Uspesno ste izmenili podatke o korisniku!", "Obavestenje", MessageBoxButtons.OK);
                 Pocetna.Ocisti(this);
@@ -293,12 +299,12 @@ namespace TVP_projekat_1
             {
                 DataGridViewRow red = dataGridView1.CurrentRow;
 
-                tb_id_korisnik.Text = red.Cells[0].Value.ToString();
-                tb_ime.Text = red.Cells[1].Value.ToString();
-                tb_prezime.Text = red.Cells[2].Value.ToString();
-                tb_korisnicko_ime.Text = red.Cells[3].Value.ToString();
-                tb_lozinka.Text = red.Cells[4].Value.ToString();
-                tb_vrsta_korisnika.Text = red.Cells[5].Value.ToString();
+                tb_id_korisnik.Text = red.Cells[0].Value?.ToString() ?? "";
+                tb_ime.Text = red.Cells[1].Value?.ToString() ?? "";
+                tb_prezime.Text = red.Cells[2].Value?.ToString() ?? "";
+                tb_korisnicko_ime.Text = red.Cells[3].Value?.ToString() ?? "";
+                tb_lozinka.Text = red.Cells[4].Value?.ToString() ?? "";
+                tb_vrsta_korisnika.Text = red.Cells[5].Value?.ToString() ?? "";
             }
         }
 
@@ -399,7 +405,9 @@ namespace TVP_projekat_1
                     Podaci.Sacuvaj();
 
                     dataGridView2.DataSource = null;
+                    dataGridView2.SelectionChanged -= dataGridView2_SelectionChanged;
                     dataGridView2.DataSource = Podaci.Igrice;
+                    dataGridView2.SelectionChanged += dataGridView2_SelectionChanged;
 
                     MessageBox.Show("Uspesno ste izmenili podatke o igrici!", "Obavestenje", MessageBoxButtons.OK);
                     Pocetna.Ocisti(this);
@@ -415,16 +423,16 @@ namespace TVP_projekat_1
             {
                 DataGridViewRow red = dataGridView2.CurrentRow;
 
-                tb_id_igrice.Text = red.Cells[0].Value.ToString();
-                tb_naziv_igrice.Text = red.Cells[1].Value.ToString();
-                tb_naziv_studija.Text = red.Cells[2].Value.ToString();
-                tb_zanr.Text = red.Cells[3].Value.ToString();
-                tb_godina_izdavanja.Text = red.Cells[4].Value.ToString();
-                tb_platforma.Text = red.Cells[5].Value.ToString();
-                tb_opis.Text = red.Cells[6].Value.ToString();
-                tb_cena_izdavanja.Text = red.Cells[7].Value.ToString();
-                tb_broj_dostupnih_primeraka.Text = red.Cells[8].Value.ToString();
-                tb_starosna_granica.Text = red.Cells[9].Value.ToString();
+                tb_id_igrice.Text = red.Cells[0].Value?.ToString() ?? "";
+                tb_naziv_igrice.Text = red.Cells[1].Value?.ToString() ?? "";
+                tb_naziv_studija.Text = red.Cells[2].Value?.ToString() ?? "";
+                tb_zanr.Text = red.Cells[3].Value?.ToString() ?? "";
+                tb_godina_izdavanja.Text = red.Cells[4].Value?.ToString() ?? "";
+                tb_platforma.Text = red.Cells[5].Value?.ToString() ?? "";
+                tb_opis.Text = red.Cells[6].Value?.ToString() ?? "";
+                tb_cena_izdavanja.Text = red.Cells[7].Value?.ToString() ?? "";
+                tb_broj_dostupnih_primeraka.Text = red.Cells[8].Value?.ToString() ?? "";
+                tb_starosna_granica.Text = red.Cells[9].Value?.ToString() ?? "";
             }
         }
 
@@ -436,6 +444,9 @@ namespace TVP_projekat_1
             {
                 MessageBox.Show("Morate popuniti sva neophodna polja!", "Upozorenje", MessageBoxButtons.OK);
             }
+
+            else if (dataGridView3.CurrentRow == null || string.IsNullOrWhiteSpace(tb_id_korisnika_i.Text))
+                MessageBox.Show("Morate selektovati izdavanje koje zelite da izmenite!", "Upozorenje", MessageBoxButtons.OK);
 
             else if (tb_status_izdavanja.Text.ToLower() != "aktivno" && tb_status_izdavanja.Text.ToLower() != "vraceno")
                 MessageBox.Show("Morate uneti validnu vrstu aktivnosti!", "Upozorenje", MessageBoxButtons.OK);
@@ -453,7 +464,7 @@ namespace TVP_projekat_1
 
                 if (izdavanje == null)
                 {
-                    MessageBox.Show("Igrica nije pronadjena!", "Upozorenje", MessageBoxButtons.OK);
+                    MessageBox.Show("Izdavanje nije pronadjeno!", "Upozorenje", MessageBoxButtons.OK);
                     return;
                 }
 
@@ -482,7 +493,9 @@ namespace TVP_projekat_1
                 Podaci.Sacuvaj();
 
                 dataGridView3.DataSource = null;
+                dataGridView3.SelectionChanged -= dataGridView3_SelectionChanged;
                 dataGridView3.DataSource = Podaci.Izdavanja;
+                dataGridView3.SelectionChanged += dataGridView3_SelectionChanged;
 
                 MessageBox.Show("Uspesno ste izmenili podatke o izdavanju!", "Obavestenje", MessageBoxButtons.OK);
                 Pocetna.Ocisti(this);
@@ -495,14 +508,175 @@ namespace TVP_projekat_1
             {
                 DataGridViewRow red = dataGridView3.CurrentRow;
 
-                tb_id_korisnika_i.Text = red.Cells[0].Value.ToString();
-                tb_id_igrice_i.Text = red.Cells[1].Value.ToString();
-                tb_ukupna_cena.Text = red.Cells[4].Value.ToString();
-                tb_status_izdavanja.Text = red.Cells[5].Value.ToString();
+                tb_id_korisnika_i.Text = red.Cells[0].Value?.ToString() ?? "";
+                tb_id_igrice_i.Text = red.Cells[1].Value?.ToString() ?? "";
+                tb_ukupna_cena.Text = red.Cells[4].Value?.ToString() ?? "";
+                tb_status_izdavanja.Text = red.Cells[5].Value?.ToString() ?? "";
 
-                if (DateTime.TryParse(red.Cells[3].Value.ToString(), out DateTime datum))
+                if (DateTime.TryParse(red.Cells[3].Value?.ToString(), out DateTime datum))
                     dtp_datum_vracanja.Value = datum.Date;
             }
+        }
+
+        private void btn_obrisi_korisnika_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null || string.IsNullOrWhiteSpace(tb_id_korisnik.Text))
+                MessageBox.Show("Morate selektovati korisnika koga zelite da obrisete!", "Upozorenje", MessageBoxButtons.OK);
+
+            else
+            {
+                DataGridViewRow red = dataGridView1.CurrentRow;
+                int.TryParse(red.Cells[0].Value.ToString(), out int id);
+
+                Korisnik korisnik = Podaci.Korisnici.FirstOrDefault(k => k.Id_korisnika == id);
+
+                if(korisnik == null)
+                {
+                    MessageBox.Show("Korisnik nije pronadjen!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                if(korisnik.Id_korisnika == this.korisnik.Id_korisnika)
+                {
+                    MessageBox.Show($"Ne mozete obrisati nalog preko kog ste prijavljeni!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                if(Podaci.Izdavanja.Any(i => i.Id_korisnika == korisnik.Id_korisnika))
+                {
+                    MessageBox.Show($"Nije moguce obrisati korisnika koji je iznajmio igricu!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                DialogResult potvrda = MessageBox.Show($"Da li ste sigurni da zelite da obrisete korisnika sa id {korisnik.Id_korisnika}?", "Pitanje", MessageBoxButtons.YesNo);
+
+                if(potvrda == DialogResult.Yes)
+                {
+                    Podaci.Korisnici.Remove(korisnik);
+                    Podaci.Sacuvaj();
+
+                    dataGridView1.DataSource = null;
+                    dataGridView1.SelectionChanged -= dataGridView1_SelectionChanged;
+                    dataGridView1.DataSource = Podaci.Korisnici;
+                    dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
+
+                    MessageBox.Show($"Uspesno ste obrisali korisnika!", "Obavestenje", MessageBoxButtons.OK);
+                    Pocetna.Ocisti(this);
+                }
+
+                else
+                    Pocetna.Ocisti(this);
+            }
+        }
+
+        private void btn_obrisi_igricu_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.CurrentRow == null || string.IsNullOrWhiteSpace(tb_id_igrice.Text))
+                MessageBox.Show("Morate selektovati igricu koju zelite da obrisete!", "Upozorenje", MessageBoxButtons.OK);
+
+            else
+            {
+                DataGridViewRow red = dataGridView2.CurrentRow;
+                int.TryParse(red.Cells[0].Value.ToString(), out int id);
+
+                Igrica igrica = Podaci.Igrice.FirstOrDefault(i => i.Id_igrice == id);
+
+                if (igrica == null)
+                {
+                    MessageBox.Show("Igrica nije pronadjena!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                if (Podaci.Izdavanja.Any(i => i.Id_igrice == igrica.Id_igrice))
+                {
+                    MessageBox.Show($"Nije moguce obrisati igricu koji je iznajmljena!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                DialogResult potvrda = MessageBox.Show($"Da li ste sigurni da zelite da obrisete igricu sa id {igrica.Id_igrice}?", "Pitanje", MessageBoxButtons.YesNo);
+
+                if (potvrda == DialogResult.Yes)
+                {
+                    Podaci.Igrice.Remove(igrica);
+                    Podaci.Sacuvaj();
+
+                    dataGridView2.DataSource = null;
+                    dataGridView2.SelectionChanged -= dataGridView2_SelectionChanged;
+                    dataGridView2.DataSource = Podaci.Igrice;
+                    dataGridView2.SelectionChanged += dataGridView2_SelectionChanged;
+
+                    MessageBox.Show($"Uspesno ste obrisali igricu!", "Obavestenje", MessageBoxButtons.OK);
+                    Pocetna.Ocisti(this);
+                }
+
+                else
+                    Pocetna.Ocisti(this);
+            }
+        }
+
+        private void btn_obrisi_izdavanje_Click(object sender, EventArgs e)
+        {
+            if (dataGridView3.CurrentRow == null || string.IsNullOrWhiteSpace(tb_id_korisnika_i.Text))
+                MessageBox.Show("Morate selektovati izdavanje koje zelite da obrisete!", "Upozorenje", MessageBoxButtons.OK);
+
+            else
+            {
+                DataGridViewRow red = dataGridView3.CurrentRow;
+                int.TryParse(red.Cells[0].Value.ToString(), out int id_korisnika);
+                int.TryParse(red.Cells[1].Value.ToString(), out int id_igrice);
+
+                string status = red.Cells[5].Value.ToString();
+
+                if(status == "aktivno")
+                {
+                    MessageBox.Show("Nije moguce obrisati aktivno izdavanje!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                Izdavanje izdavanje = Podaci.Izdavanja.FirstOrDefault(i => i.Id_korisnika == id_korisnika &&
+                                                                           i.Id_igrice == id_igrice &&
+                                                                           i.Status_izdavanja == "vraceno");
+
+                if (izdavanje == null)
+                {
+                    MessageBox.Show("Izdavanje nije pronadjeno!", "Upozorenje", MessageBoxButtons.OK);
+                    return;
+                }
+
+                DialogResult potvrda = MessageBox.Show($"Da li ste sigurni da zelite da obrisete izdavanje sa id {izdavanje.Id_korisnika} - {izdavanje.Id_igrice}?", "Pitanje", MessageBoxButtons.YesNo);
+
+                if (potvrda == DialogResult.Yes)
+                {
+                    Podaci.Izdavanja.Remove(izdavanje);
+                    Podaci.Sacuvaj();
+
+                    dataGridView3.DataSource = null;
+                    dataGridView3.SelectionChanged -= dataGridView3_SelectionChanged;
+                    dataGridView3.DataSource = Podaci.Izdavanja;
+                    dataGridView3.SelectionChanged += dataGridView3_SelectionChanged;
+
+                    MessageBox.Show($"Uspesno ste obrisali izdavanje!", "Obavestenje", MessageBoxButtons.OK);
+                    Pocetna.Ocisti(this);
+                }
+
+                else
+                    Pocetna.Ocisti(this);
+            }
+        }
+
+        private void btn_odjava1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_odjava2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_odjava3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

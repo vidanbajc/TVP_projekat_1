@@ -3,18 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|c:\\users\\bajc\\desktop\\tvp_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|c:\\users\\bajc\\desktop\\tvp_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bajc\\Desktop\\stari_TVP\\TVP_projekat1_v2\\TVP_projekat1_v2\\Administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|c:\\users\\bajc\\desktop\\tvp_projekat_1\\tvp_projekat_1\\podaci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\tvp_projekat_1\\podaci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\podaci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,7 +35,7 @@
               "RelativeDocumentMoniker": "..\\stari_TVP\\TVP_projekat1_v2\\TVP_projekat1_v2\\Administrator.cs",
               "ToolTip": "C:\\Users\\Bajc\\Desktop\\stari_TVP\\TVP_projekat1_v2\\TVP_projekat1_v2\\Administrator.cs",
               "RelativeToolTip": "..\\stari_TVP\\TVP_projekat1_v2\\TVP_projekat1_v2\\Administrator.cs",
-              "ViewState": "AgIAAO4CAAAAAAAAAAAAAAADAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAJQCAAAAAAAAAAAAANECAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T08:52:57.346Z",
               "EditorCaption": ""
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "TVP_projekat_1\\Podaci.cs",
               "ToolTip": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Podaci.cs",
               "RelativeToolTip": "TVP_projekat_1\\Podaci.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwDwAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAqwEwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T09:20:47.753Z",
               "EditorCaption": ""
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "TVP_projekat_1\\Administrator.cs",
               "ToolTip": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs",
               "RelativeToolTip": "TVP_projekat_1\\Administrator.cs",
-              "ViewState": "AgIAANkBAAAAAAAAAAAjwPABAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAKACAAAAAAAAAADwv6wCAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T13:50:15.053Z",
               "EditorCaption": ""

@@ -48,16 +48,4 @@
     <Broj_dostupnih_primeraka>2</Broj_dostupnih_primeraka>
     <Starosna_granica>2</Starosna_granica>
   </Igrica>
-  <Igrica>
-    <Id_igrice>5</Id_igrice>
-    <Naziv_igrice>tt</Naziv_igrice>
-    <Naziv_studija>tt</Naziv_studija>
-    <Zanr>tt</Zanr>
-    <Godina_izdavanja>2222</Godina_izdavanja>
-    <Platforma>tt</Platforma>
-    <Opis>tt</Opis>
-    <Cena_izdavanja>4</Cena_izdavanja>
-    <Broj_dostupnih_primeraka>4</Broj_dostupnih_primeraka>
-    <Starosna_granica>4</Starosna_granica>
-  </Igrica>
 </ArrayOfIgrica>

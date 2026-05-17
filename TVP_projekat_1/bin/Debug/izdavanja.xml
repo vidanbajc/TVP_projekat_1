@@ -2,14 +2,6 @@
 <ArrayOfIzdavanje xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Izdavanje>
     <Id_korisnika>1</Id_korisnika>
-    <Id_igrice>1</Id_igrice>
-    <Datum_izdavanja>2026-05-16T00:00:00</Datum_izdavanja>
-    <Datum_vracanja>2026-05-26T00:00:00</Datum_vracanja>
-    <Ukupna_cena>4000</Ukupna_cena>
-    <Status_izdavanja>aktivno</Status_izdavanja>
-  </Izdavanje>
-  <Izdavanje>
-    <Id_korisnika>1</Id_korisnika>
     <Id_igrice>2</Id_igrice>
     <Datum_izdavanja>2026-05-17T11:17:11.0711585+02:00</Datum_izdavanja>
     <Datum_vracanja>2026-05-17T00:00:00</Datum_vracanja>
@@ -20,8 +12,24 @@
     <Id_korisnika>2</Id_korisnika>
     <Id_igrice>1</Id_igrice>
     <Datum_izdavanja>2026-05-17T13:12:40.6091732+02:00</Datum_izdavanja>
-    <Datum_vracanja>2026-05-22T00:00:00</Datum_vracanja>
-    <Ukupna_cena>10000</Ukupna_cena>
+    <Datum_vracanja>2026-05-20T00:00:00</Datum_vracanja>
+    <Ukupna_cena>6000</Ukupna_cena>
     <Status_izdavanja>vraceno</Status_izdavanja>
+  </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>1</Id_korisnika>
+    <Id_igrice>1</Id_igrice>
+    <Datum_izdavanja>2026-05-17T15:40:12.1213377+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
+    <Ukupna_cena>20000</Ukupna_cena>
+    <Status_izdavanja>aktivno</Status_izdavanja>
+  </Izdavanje>
+  <Izdavanje>
+    <Id_korisnika>1</Id_korisnika>
+    <Id_igrice>3</Id_igrice>
+    <Datum_izdavanja>2026-05-17T15:49:54.6279371+02:00</Datum_izdavanja>
+    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
+    <Ukupna_cena>30000</Ukupna_cena>
+    <Status_izdavanja>aktivno</Status_izdavanja>
   </Izdavanje>
 </ArrayOfIzdavanje>

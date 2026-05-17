@@ -275,6 +275,7 @@
             this.btn_odjava1.TabIndex = 55;
             this.btn_odjava1.Text = "Odjavi se";
             this.btn_odjava1.UseVisualStyleBackColor = true;
+            this.btn_odjava1.Click += new System.EventHandler(this.btn_odjava1_Click);
             // 
             // btn_obrisi_korisnika
             // 
@@ -285,6 +286,7 @@
             this.btn_obrisi_korisnika.TabIndex = 54;
             this.btn_obrisi_korisnika.Text = "Obrisi";
             this.btn_obrisi_korisnika.UseVisualStyleBackColor = true;
+            this.btn_obrisi_korisnika.Click += new System.EventHandler(this.btn_obrisi_korisnika_Click);
             // 
             // btn_izmeni_korisnika
             // 
@@ -600,6 +602,7 @@
             this.btn_odjava2.TabIndex = 79;
             this.btn_odjava2.Text = "Odjavi se";
             this.btn_odjava2.UseVisualStyleBackColor = true;
+            this.btn_odjava2.Click += new System.EventHandler(this.btn_odjava2_Click);
             // 
             // btn_obrisi_igricu
             // 
@@ -610,6 +613,7 @@
             this.btn_obrisi_igricu.TabIndex = 78;
             this.btn_obrisi_igricu.Text = "Obrisi";
             this.btn_obrisi_igricu.UseVisualStyleBackColor = true;
+            this.btn_obrisi_igricu.Click += new System.EventHandler(this.btn_obrisi_igricu_Click);
             // 
             // btn_izmeni_igricu
             // 
@@ -866,6 +870,7 @@
             this.btn_odjava3.TabIndex = 97;
             this.btn_odjava3.Text = "Odjavi se";
             this.btn_odjava3.UseVisualStyleBackColor = true;
+            this.btn_odjava3.Click += new System.EventHandler(this.btn_odjava3_Click);
             // 
             // btn_obrisi_izdavanje
             // 
@@ -876,6 +881,7 @@
             this.btn_obrisi_izdavanje.TabIndex = 96;
             this.btn_obrisi_izdavanje.Text = "Obrisi";
             this.btn_obrisi_izdavanje.UseVisualStyleBackColor = true;
+            this.btn_obrisi_izdavanje.Click += new System.EventHandler(this.btn_obrisi_izdavanje_Click);
             // 
             // btn_izmeni_izdavanje
             // 
@@ -935,7 +941,7 @@
             this.id_korisnika_i.HeaderText = "id korisnika";
             this.id_korisnika_i.MinimumWidth = 6;
             this.id_korisnika_i.Name = "id_korisnika_i";
-            this.id_korisnika_i.Width = 85;
+            this.id_korisnika_i.Width = 79;
             // 
             // id_igrice_i
             // 
@@ -943,7 +949,7 @@
             this.id_igrice_i.HeaderText = "id igrice";
             this.id_igrice_i.MinimumWidth = 6;
             this.id_igrice_i.Name = "id_igrice_i";
-            this.id_igrice_i.Width = 68;
+            this.id_igrice_i.Width = 63;
             // 
             // datum_izdavanja
             // 
