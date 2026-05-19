@@ -8,6 +8,8 @@ namespace TVP_projekat_1
 {
     public class IznajmljivanjeIgrica
     {
+        private int id_korisnika;
+        private int id_igrice;
         private string naziv_igrice;
         private string naziv_studija;
         private string zanr;
@@ -29,11 +31,15 @@ namespace TVP_projekat_1
         public DateTime Datum_vracanja { get => datum_vracanja; set => datum_vracanja = value; }
         public double Ukupna_cena { get => ukupna_cena; set => ukupna_cena = value; }
         public string Status_izdavanja { get => status_izdavanja; set => status_izdavanja = value; }
+        public int Id_korisnika { get => id_korisnika; set => id_korisnika = value; }
+        public int Id_igrice { get => id_igrice; set => id_igrice = value; }
 
         public IznajmljivanjeIgrica() { }
 
-        public IznajmljivanjeIgrica(string naziv_igrice, string naziv_studija, string zanr, int godina_izdavanja, string platforma, string opis, DateTime datum_izdavanja, DateTime datum_vracanja, double ukupna_cena, string status_izdavanja)
+        public IznajmljivanjeIgrica(int id_korisnika, int id_igrice, string naziv_igrice, string naziv_studija, string zanr, int godina_izdavanja, string platforma, string opis, DateTime datum_izdavanja, DateTime datum_vracanja, double ukupna_cena, string status_izdavanja)
         {
+            this.id_korisnika = id_korisnika;
+            this.id_igrice = id_igrice;
             this.naziv_igrice = naziv_igrice;
             this.naziv_studija = naziv_studija;
             this.zanr = zanr;

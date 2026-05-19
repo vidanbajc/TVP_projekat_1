@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Korisnici = new System.Windows.Forms.TabPage();
             this.lbl_vrsta_korisnika = new System.Windows.Forms.Label();
@@ -941,7 +943,7 @@
             this.id_korisnika_i.HeaderText = "id korisnika";
             this.id_korisnika_i.MinimumWidth = 6;
             this.id_korisnika_i.Name = "id_korisnika_i";
-            this.id_korisnika_i.Width = 79;
+            this.id_korisnika_i.Width = 85;
             // 
             // id_igrice_i
             // 
@@ -949,11 +951,13 @@
             this.id_igrice_i.HeaderText = "id igrice";
             this.id_igrice_i.MinimumWidth = 6;
             this.id_igrice_i.Name = "id_igrice_i";
-            this.id_igrice_i.Width = 63;
+            this.id_igrice_i.Width = 68;
             // 
             // datum_izdavanja
             // 
             this.datum_izdavanja.DataPropertyName = "datum_izdavanja";
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy HH:mm";
+            this.datum_izdavanja.DefaultCellStyle = dataGridViewCellStyle1;
             this.datum_izdavanja.HeaderText = "datum izdavanja";
             this.datum_izdavanja.MinimumWidth = 6;
             this.datum_izdavanja.Name = "datum_izdavanja";
@@ -961,6 +965,8 @@
             // datum_vracanja
             // 
             this.datum_vracanja.DataPropertyName = "datum_vracanja";
+            dataGridViewCellStyle2.Format = "dd.MM.yyyy";
+            this.datum_vracanja.DefaultCellStyle = dataGridViewCellStyle2;
             this.datum_vracanja.HeaderText = "datum vracanja";
             this.datum_vracanja.MinimumWidth = 6;
             this.datum_vracanja.Name = "datum_vracanja";

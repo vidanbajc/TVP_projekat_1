@@ -86,7 +86,7 @@ namespace TVP_projekat_1
                 dataGridView1.DataSource = Podaci.Korisnici;
 
                 MessageBox.Show("Uspesno ste dodali novog korisnika!", "Obavestenje", MessageBoxButtons.OK);
-                Pocetna.Ocisti(this);
+                p.Ocisti(this);
             }
         }
 
@@ -146,7 +146,7 @@ namespace TVP_projekat_1
                 dataGridView2.DataSource = Podaci.Igrice;
 
                 MessageBox.Show("Uspesno ste dodali novu igricu!", "Obavestenje", MessageBoxButtons.OK);
-                Pocetna.Ocisti(this);
+                p.Ocisti(this);
             }
             else
                 MessageBox.Show("Morate ispravno popuniti polja (godina, cena, broj dostupnih primeraka ili starosna granica)!", "Upozorenje", MessageBoxButtons.OK);
@@ -206,7 +206,7 @@ namespace TVP_projekat_1
                 dataGridView3.DataSource = Podaci.Izdavanja;
 
                 MessageBox.Show("Uspesno ste dodali novo izdavanje!", "Obavestenje", MessageBoxButtons.OK);
-                Pocetna.Ocisti(this);
+                p.Ocisti(this);
             }
             else
                 MessageBox.Show("Morate ispravno popuniti polja (id korisnika, id igrice, ukupnu cenu)!", "Upozorenje", MessageBoxButtons.OK);
@@ -289,7 +289,7 @@ namespace TVP_projekat_1
                 dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
 
                 MessageBox.Show("Uspesno ste izmenili podatke o korisniku!", "Obavestenje", MessageBoxButtons.OK);
-                Pocetna.Ocisti(this);
+                p.Ocisti(this);
             }
         }
 
@@ -349,7 +349,7 @@ namespace TVP_projekat_1
                 if (Podaci.Izdavanja.Any(i => i.Id_igrice == id && i.Status_izdavanja == "aktivno"))
                 {
                     MessageBox.Show("Nije moguce menjati igricu koja je iznajmljena!", "Upozorenje", MessageBoxButtons.OK);
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
                     return;
                 }
 
@@ -410,7 +410,7 @@ namespace TVP_projekat_1
                     dataGridView2.SelectionChanged += dataGridView2_SelectionChanged;
 
                     MessageBox.Show("Uspesno ste izmenili podatke o igrici!", "Obavestenje", MessageBoxButtons.OK);
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
                 }
                 else
                     MessageBox.Show("Niste uneli dobre podatke!", "Upozorenje", MessageBoxButtons.OK);
@@ -498,7 +498,7 @@ namespace TVP_projekat_1
                 dataGridView3.SelectionChanged += dataGridView3_SelectionChanged;
 
                 MessageBox.Show("Uspesno ste izmenili podatke o izdavanju!", "Obavestenje", MessageBoxButtons.OK);
-                Pocetna.Ocisti(this);
+                p.Ocisti(this);
             }
         }
 
@@ -561,11 +561,11 @@ namespace TVP_projekat_1
                     dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
 
                     MessageBox.Show($"Uspesno ste obrisali korisnika!", "Obavestenje", MessageBoxButtons.OK);
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
                 }
 
                 else
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
             }
         }
 
@@ -606,11 +606,11 @@ namespace TVP_projekat_1
                     dataGridView2.SelectionChanged += dataGridView2_SelectionChanged;
 
                     MessageBox.Show($"Uspesno ste obrisali igricu!", "Obavestenje", MessageBoxButtons.OK);
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
                 }
 
                 else
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
             }
         }
 
@@ -656,11 +656,11 @@ namespace TVP_projekat_1
                     dataGridView3.SelectionChanged += dataGridView3_SelectionChanged;
 
                     MessageBox.Show($"Uspesno ste obrisali izdavanje!", "Obavestenje", MessageBoxButtons.OK);
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
                 }
 
                 else
-                    Pocetna.Ocisti(this);
+                    p.Ocisti(this);
             }
         }
 

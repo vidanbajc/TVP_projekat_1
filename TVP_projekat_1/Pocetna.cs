@@ -19,18 +19,27 @@ namespace TVP_projekat_1
             Podaci.Ucitaj();
         }
 
-        public static void Ocisti(Control parent)
+        public void Ocisti(Control parent)
         {
             foreach (Control c in parent.Controls)
             {
-                if (c is TextBox tb)
+                if (c.Parent is Form && c is TextBox tb)
                     tb.Clear();
 
-                if (c is DateTimePicker dtp)
+                else if (c.Parent is Form && c is DateTimePicker dtp)
                     dtp.ResetText();
 
                 if (c.HasChildren)
                     Ocisti(c);
+            }
+        }
+
+        public void Ocisti_panel(Panel p)
+        {
+            foreach(Control c in p.Controls)
+            {
+                if (c is Label lbl && lbl.Name.StartsWith("lbl_"))
+                    lbl.ResetText();
             }
         }
 

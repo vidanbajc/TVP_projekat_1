@@ -13,12 +13,10 @@ namespace TVP_projekat_1
         private static List<Korisnik> korisnici = new List<Korisnik>();
         private static List<Igrica> igrice = new List<Igrica>();
         private static List<Izdavanje> izdavanja = new List<Izdavanje>();
-        private static List<IznajmljivanjeIgrica> iznajmljivanje_igrica = new List<IznajmljivanjeIgrica>();
 
         internal static List<Korisnik> Korisnici { get => korisnici; set => korisnici = value; }
         internal static List<Igrica> Igrice { get => igrice; set => igrice = value; }
         internal static List<Izdavanje> Izdavanja { get => izdavanja; set => izdavanja = value; }
-        internal static List<IznajmljivanjeIgrica> Iznajmljivanje_igrica { get => iznajmljivanje_igrica; set => iznajmljivanje_igrica = value; }
 
         public static void Sacuvaj()
         {

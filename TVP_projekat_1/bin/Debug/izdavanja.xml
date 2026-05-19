@@ -36,9 +36,9 @@
     <Id_korisnika>6</Id_korisnika>
     <Id_igrice>3</Id_igrice>
     <Datum_izdavanja>2026-05-17T21:37:36.1708554+02:00</Datum_izdavanja>
-    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
-    <Ukupna_cena>30000</Ukupna_cena>
-    <Status_izdavanja>aktivno</Status_izdavanja>
+    <Datum_vracanja>2026-05-29T00:00:00</Datum_vracanja>
+    <Ukupna_cena>36000</Ukupna_cena>
+    <Status_izdavanja>vraceno</Status_izdavanja>
   </Izdavanje>
   <Izdavanje>
     <Id_korisnika>6</Id_korisnika>
@@ -52,8 +52,8 @@
     <Id_korisnika>6</Id_korisnika>
     <Id_igrice>1</Id_igrice>
     <Datum_izdavanja>2026-05-17T21:37:57.2736212+02:00</Datum_izdavanja>
-    <Datum_vracanja>2026-05-27T00:00:00</Datum_vracanja>
-    <Ukupna_cena>20000</Ukupna_cena>
+    <Datum_vracanja>2026-05-30T00:00:00</Datum_vracanja>
+    <Ukupna_cena>26000</Ukupna_cena>
     <Status_izdavanja>aktivno</Status_izdavanja>
   </Izdavanje>
   <Izdavanje>
