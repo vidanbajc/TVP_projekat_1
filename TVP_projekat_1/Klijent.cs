@@ -168,25 +168,25 @@ namespace TVP_projekat_1
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if(dataGridView1.CurrentRow != null)
-            {
-                DataGridViewRow red = dataGridView1.CurrentRow;
+            if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Index == -1)
+                return;
+            
+            DataGridViewRow red = dataGridView1.CurrentRow;
 
-                DateTime.TryParse(red.Cells[8].Value?.ToString(), out DateTime datum_izdavanja);
-                DateTime.TryParse(red.Cells[9].Value?.ToString(), out DateTime datum_vracanja);
+            DateTime.TryParse(red.Cells[8].Value?.ToString(), out DateTime datum_izdavanja);
+            DateTime.TryParse(red.Cells[9].Value?.ToString(), out DateTime datum_vracanja);
 
-                dtp_datum_vracanja.Value = datum_vracanja.Date;
+            dtp_datum_vracanja.Value = datum_vracanja.Date;
 
-                lbl_naziv_igrice_a.Text = red.Cells[2].Value?.ToString() ?? "";
-                lbl_naziv_studija_a.Text = red.Cells[3].Value?.ToString() ?? "";
-                lbl_zanr_a.Text = red.Cells[4].Value?.ToString() ?? "";
-                lbl_godina_izdavanja_a.Text = red.Cells[5].Value?.ToString() ?? "";
-                lbl_platforma_a.Text = red.Cells[6].Value?.ToString() ?? "";
-                lbl_opis_a.Text = red.Cells[7].Value?.ToString() ?? "";
-                lbl_datum_izdavanja_a.Text = datum_izdavanja.ToString("dd.MM.yyyy HH:mm") ?? "";
-                lbl_datum_vracanja_a.Text = datum_vracanja.ToString("dd.MM.yyyy") ?? "";
-                lbl_ukupna_cena_a.Text = red.Cells[10].Value?.ToString() ?? "";
-            }
+            lbl_naziv_igrice_a.Text = red.Cells[2].Value?.ToString() ?? "";
+            lbl_naziv_studija_a.Text = red.Cells[3].Value?.ToString() ?? "";
+            lbl_zanr_a.Text = red.Cells[4].Value?.ToString() ?? "";
+            lbl_godina_izdavanja_a.Text = red.Cells[5].Value?.ToString() ?? "";
+            lbl_platforma_a.Text = red.Cells[6].Value?.ToString() ?? "";
+            lbl_opis_a.Text = red.Cells[7].Value?.ToString() ?? "";
+            lbl_datum_izdavanja_a.Text = datum_izdavanja.ToString("dd.MM.yyyy HH:mm") ?? "";
+            lbl_datum_vracanja_a.Text = datum_vracanja.ToString("dd.MM.yyyy") ?? "";
+            lbl_ukupna_cena_a.Text = red.Cells[10].Value?.ToString() ?? "";
         }
 
         private void btn_pretrazi_Click(object sender, EventArgs e)
@@ -226,26 +226,26 @@ namespace TVP_projekat_1
 
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView2.CurrentRow != null)
-            {
-                DataGridViewRow red = dataGridView2.CurrentRow;
+            if (dataGridView2.CurrentRow == null || dataGridView2.CurrentRow.Index == -1)
+                return;
+            
+            DataGridViewRow red = dataGridView2.CurrentRow;
 
-                DateTime.TryParse(red.Cells[8].Value?.ToString(), out DateTime datum_izdavanja);
-                DateTime.TryParse(red.Cells[9].Value?.ToString(), out DateTime datum_vracanja);
+            DateTime.TryParse(red.Cells[8].Value?.ToString(), out DateTime datum_izdavanja);
+            DateTime.TryParse(red.Cells[9].Value?.ToString(), out DateTime datum_vracanja);
 
-                dtp_datum_iznajmljivanja.Value = datum_izdavanja.Date;
-                dtp_datum_vracanja.Value = datum_vracanja.Date;
+            dtp_datum_iznajmljivanja.Value = datum_izdavanja.Date;
+            dtp_datum_vracanja.Value = datum_vracanja.Date;
 
-                lbl_naziv_igrice_v.Text = red.Cells[2].Value?.ToString() ?? "";
-                lbl_naziv_studija_v.Text = red.Cells[3].Value?.ToString() ?? "";
-                lbl_zanr_v.Text = red.Cells[4].Value?.ToString() ?? "";
-                lbl_godina_izdavanja_v.Text = red.Cells[5].Value?.ToString() ?? "";
-                lbl_platforma_v.Text = red.Cells[6].Value?.ToString() ?? "";
-                lbl_opis_v.Text = red.Cells[7].Value?.ToString() ?? "";
-                lbl_datum_izdavanja_v.Text = datum_izdavanja.ToString("dd.MM.yyyy HH:mm") ?? "";
-                lbl_datum_vracanja_v.Text = datum_vracanja.ToString("dd.MM.yyyy") ?? "";
-                lbl_ukupna_cena_v.Text = red.Cells[10].Value?.ToString() ?? "";
-            }
+            lbl_naziv_igrice_v.Text = red.Cells[2].Value?.ToString() ?? "";
+            lbl_naziv_studija_v.Text = red.Cells[3].Value?.ToString() ?? "";
+            lbl_zanr_v.Text = red.Cells[4].Value?.ToString() ?? "";
+            lbl_godina_izdavanja_v.Text = red.Cells[5].Value?.ToString() ?? "";
+            lbl_platforma_v.Text = red.Cells[6].Value?.ToString() ?? "";
+            lbl_opis_v.Text = red.Cells[7].Value?.ToString() ?? "";
+            lbl_datum_izdavanja_v.Text = datum_izdavanja.ToString("dd.MM.yyyy HH:mm") ?? "";
+            lbl_datum_vracanja_v.Text = datum_vracanja.ToString("dd.MM.yyyy") ?? "";
+            lbl_ukupna_cena_v.Text = red.Cells[10].Value?.ToString() ?? "";
         }
 
         private void btn_odjava1_Click(object sender, EventArgs e)
@@ -357,16 +357,16 @@ namespace TVP_projekat_1
 
         private void dataGridView3_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView3.CurrentRow != null)
-            {
-                DataGridViewRow red = dataGridView3.CurrentRow;
+            if (dataGridView3.CurrentRow == null || dataGridView3.CurrentRow.Index == -1)
+                return;
 
-                tb_naziv_igrice.Text = red.Cells[0].Value?.ToString() ?? "";
-                tb_naziv_studija.Text = red.Cells[1].Value?.ToString() ?? "";
-                tb_zanr.Text = red.Cells[2].Value?.ToString() ?? "";
-                tb_godina_izdavanja.Text = red.Cells[3].Value?.ToString() ?? "";
-                tb_platforma.Text = red.Cells[4].Value?.ToString() ?? "";
-            }
+            DataGridViewRow red = dataGridView3.CurrentRow;
+
+            tb_naziv_igrice.Text = red.Cells[0].Value?.ToString() ?? "";
+            tb_naziv_studija.Text = red.Cells[1].Value?.ToString() ?? "";
+            tb_zanr.Text = red.Cells[2].Value?.ToString() ?? "";
+            tb_godina_izdavanja.Text = red.Cells[3].Value?.ToString() ?? "";
+            tb_platforma.Text = red.Cells[4].Value?.ToString() ?? "";
         }
     }
 }

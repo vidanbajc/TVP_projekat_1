@@ -1,0 +1,64 @@
+Prijava kao admin otvara admin deo aplikacije ✔
+Prijava kao klijent otvara klijentski deo aplikacije ✔
+Pogrešna lozinka ne dozvoljava pristup ✔
+Razlikovanje admin i klijent privilegija ✔
+Serijalizovani podaci ostaju sačuvani nakon gašenja aplikacije ✔
+Učitavanje podataka iz fajla pri ponovnom pokretanju aplikacije ✔
+Aplikacija se ne ruši ako fajl sa podacima ne postoji pri prvom pokretanju ✔
+Aplikacija se ne ruši ako je fajl prazan ili oštećen ✔
+Dodavanje igrice sa validnim podacima ✔
+Dodavanje igrice sa već postojećim ID-em ✔
+Izmena igrice bez promene ID-a ✔
+Brisanje igrice koja nema aktivna izdavanja ✔
+Pokušaj brisanja igrice koja ima aktivna izdavanja ✔
+Unos negativne cene izdavanja ✔
+Unos negativnog broja primeraka ✔
+Unos buduće godine izdavanja ✔
+Filtriranje igrica po nazivu ✔
+Filtriranje igrica po žanru ✔
+Filtriranje igrica po godini izdavanja ✔
+Kombinovano filtriranje po više kriterijuma ✔
+Filtriranje vraća prazan rezultat ✔
+Dodavanje korisnika sa validnim podacima ✔
+Dodavanje korisnika sa već postojećim korisničkim imenom ✔
+Izmena korisnika bez promene ID-a ✔
+Brisanje korisnika bez aktivnih izdavanja ✔
+Pokušaj brisanja korisnika sa aktivnim izdavanjima ✔
+Promena vrste korisnika admin ↔ klijent ✔
+Lozinka se pravilno čuva i učitava ✔
+Unos praznog korisničkog imena ✔
+Kreiranje novog izdavanja sa validnim podacima ✔
+Automatsko beleženje datuma i vremena kreiranja izdavanja ✔
+Automatski obračun ukupne cene ✔
+Ručna izmena ukupne cene nije moguća ✔
+
+Izdavanje igrice kada postoji dovoljan broj primeraka ✔
+Pokušaj izdavanja igrice kada nema dostupnih primeraka ✔
+Smanjenje broja dostupnih primeraka nakon izdavanja ✔
+Vraćanje primerka povećava broj dostupnih primeraka ✔
+Tačnost broja dostupnih primeraka nakon više izdavanja i vraćanja ✔
+Jedan korisnik pokušava da izda istu igricu dva puta dok je prvo izdavanje aktivno ✔
+Drugi korisnik može izdati istu igricu ako postoje slobodni primerci ✔
+
+Izdavanje na 0 dana ✔
+Izdavanje na negativan broj dana ✔
+Izdavanje sa datumom vraćanja pre datuma izdavanja ✔
+Prikaz detalja izdavanja ✔
+Klijent vidi samo svoja izdavanja ✔
+Klijent nema pristup admin funkcionalnostima ✔
+Klijent ne vidi ID vrednosti ✔
+Nakon uspešnog izdavanja korisnik se vraća na početnu formu ✔
+Pregled istorije izdavanja ✔
+Pretraga istorije po datumu ✔
+Pretraga istorije po nazivu igrice ✔
+Početni datum veći od krajnjeg datuma ✔
+Kombinovana pretraga datum i naziv igrice ✔
+Pretraga bez rezultata ✔
+Osvežavanje liste nakon dodavanja/izmene ✔
+Istovremeno više aktivnih izdavanja različitih igrica za jednog korisnika ✔
+Persistencija aktivnih izdavanja nakon restarta aplikacije ✔
+Persistencija statusa vraćeno nakon restarta aplikacije ✔
+Validacija numeričkih polja pri unosu teksta ✔
+Validacija praznih obaveznih polja ✔
+Otkazivanje dodavanja ne kreira zapis ✔
+Aplikacija pravilno zatvara fajlove nakon serijalizacije/deserijalizacije ✔
