@@ -21,7 +21,7 @@ namespace TVP_projekat_1
             this.korisnik = korisnik;
         }
 
-        public IznajmljivanjeIgrica pretvori_u_iznajmljivanje_igrica(Izdavanje iz)
+        public IznajmljivanjeIgrica PrikazIznajmljivanja(Izdavanje iz)
         {
             Igrica igrica = Podaci.Igrice.FirstOrDefault(ig => ig.Id_igrice == iz.Id_igrice);
 
@@ -47,18 +47,22 @@ namespace TVP_projekat_1
         public List<IznajmljivanjeIgrica> UcitajAktivne()
         {
             return Podaci.Izdavanja
-                .Where(iz => iz.Id_korisnika == korisnik.Id_korisnika && iz.Status_izdavanja == "aktivno")
-                .Select(pretvori_u_iznajmljivanje_igrica).ToList();
+                .Where(iz => 
+                    iz.Id_korisnika == korisnik.Id_korisnika && 
+                    iz.Status_izdavanja == "aktivno")
+                .Select(PrikazIznajmljivanja).ToList();
         }
 
         public List<IznajmljivanjeIgrica> UcitajVracene()
         {
             return Podaci.Izdavanja
-                .Where(iz => iz.Id_korisnika == korisnik.Id_korisnika && iz.Status_izdavanja == "vraceno")
-                .Select(pretvori_u_iznajmljivanje_igrica).ToList();
+                .Where(iz =>
+                    iz.Id_korisnika == korisnik.Id_korisnika && 
+                    iz.Status_izdavanja == "vraceno")
+                .Select(PrikazIznajmljivanja).ToList();
         }
 
-        public void Popuni_cb()
+        public void PopuniComboBox()
         {
             List<string> zanrovi = null;
             zanrovi = Podaci.Igrice.Select(i => i.Zanr).Distinct().ToList();
@@ -84,15 +88,8 @@ namespace TVP_projekat_1
             dataGridView2.DataSource = UcitajVracene();
             dataGridView3.DataSource = Podaci.Igrice;
 
-            Popuni_cb();
+            PopuniComboBox();
         }
-
-        // vezano za broj_dostupnih_primeraka, moram dodati i u adminu za status_izdavanja
-        // dugme izmeni mora stalno da prebrojava ako je status_izdavanja -> vraceno
-        // onda broj primeraka +1 ...
-        // mozda dodati i za datum, zbog toga sto klijent moze da 'zakaze' igricu
-        // ako bi se samo oslanjao na status_izdavanja, imali bi smo manje stanje od realnog
-        
 
         private void Klijent_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -102,58 +99,71 @@ namespace TVP_projekat_1
         private void btn_izmeni_izdavanje_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
-                MessageBox.Show("Morate selektovati iznajmljivanje koje zelite da izmenite!", "Upozorenje", MessageBoxButtons.OK);
-
-            // dodati i za vreme, posto moze da 'zakaze' i nije dovoljan samo danasnji datum
-            // mora da poredi i sa datum_izdavanja
-            else if (dtp_datum_vracanja.Value.Date <= DateTime.Now.Date)
-                MessageBox.Show("Morate uneti validan datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
-
-            else
             {
-                DataGridViewRow red = dataGridView1.CurrentRow;
-                int.TryParse(red.Cells[0].Value.ToString(), out int id_korisnika);
-                int.TryParse(red.Cells[1].Value.ToString(), out int id_igrice);
-                DateTime.TryParse(red.Cells[9].Value?.ToString(), out DateTime datum_vracanja);
-
-                if (dtp_datum_vracanja.Value.Date == datum_vracanja.Date)
-                {
-                    MessageBox.Show("Niste promenili datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
-                    return;
-                }
-
-                Izdavanje izdavanje = Podaci.Izdavanja.FirstOrDefault(i => i.Id_korisnika == id_korisnika && i.Id_igrice == id_igrice);
-
-                if (izdavanje == null)
-                {
-                    MessageBox.Show("Izdavanje nije pronadjeno!", "Upozorenje", MessageBoxButtons.OK);
-                    return;
-                }
-
-                Igrica igrica = Podaci.Igrice.FirstOrDefault(i => i.Id_igrice == id_igrice);
-
-                if (igrica == null)
-                {
-                    MessageBox.Show("Igrica nije pronadjena!", "Upozorenje", MessageBoxButtons.OK);
-                    return;
-                }
-
-                int broj_dana = (dtp_datum_vracanja.Value.Date - izdavanje.Datum_izdavanja.Date).Days;
-
-                izdavanje.Datum_vracanja = dtp_datum_vracanja.Value.Date;
-                izdavanje.Ukupna_cena = broj_dana * igrica.Cena_izdavanja;
-
-                Podaci.Sacuvaj();
-
-                dataGridView1.DataSource = null;
-                dataGridView1.SelectionChanged -= dataGridView1_SelectionChanged;
-                dataGridView1.DataSource = UcitajAktivne();
-                dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
-
-                MessageBox.Show("Uspesno ste promenili datum vracanja iznajmljivanja!", "Obavestenje", MessageBoxButtons.OK);
-                p.Ocisti(this);
-                p.Ocisti_panel(detalji1);
+                MessageBox.Show("Morate selektovati iznajmljivanje koje zelite da izmenite!", "Upozorenje", MessageBoxButtons.OK);
+                return;
             }
+
+            if (dtp_datum_vracanja.Value.Date <= DateTime.Now.Date)
+            {
+                MessageBox.Show("Morate uneti validan datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
+
+            DataGridViewRow red = dataGridView1.CurrentRow;
+
+            int.TryParse(red.Cells[0].Value.ToString(), out int id_korisnika);
+            int.TryParse(red.Cells[1].Value.ToString(), out int id_igrice);
+            DateTime.TryParse(red.Cells[8].Value?.ToString(), out DateTime datum_iznajmljivanja);
+            DateTime.TryParse(red.Cells[9].Value?.ToString(), out DateTime datum_vracanja);
+
+            if(datum_iznajmljivanja.Date > datum_vracanja.Date)
+            {
+                MessageBox.Show("Morate uneti validan datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (dtp_datum_vracanja.Value.Date == datum_vracanja.Date)
+            {
+                MessageBox.Show("Niste promenili datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
+
+            Izdavanje izdavanje = Podaci.Izdavanja
+                .FirstOrDefault(i => 
+                    i.Id_korisnika == id_korisnika && 
+                    i.Id_igrice == id_igrice &&
+                    i.Status_izdavanja == "aktivno");
+
+            if (izdavanje == null)
+            {
+                MessageBox.Show("Izdavanje nije pronadjeno!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
+
+            Igrica igrica = Podaci.Igrice.FirstOrDefault(i => i.Id_igrice == id_igrice);
+
+            if (igrica == null)
+            {
+                MessageBox.Show("Igrica nije pronadjena!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
+
+            int broj_dana = (dtp_datum_vracanja.Value.Date - izdavanje.Datum_izdavanja.Date).Days;
+
+            izdavanje.Datum_vracanja = dtp_datum_vracanja.Value.Date;
+            izdavanje.Ukupna_cena = broj_dana * igrica.Cena_izdavanja;
+
+            Podaci.Sacuvaj();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.SelectionChanged -= dataGridView1_SelectionChanged;
+            dataGridView1.DataSource = UcitajAktivne();
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
+
+            MessageBox.Show("Uspesno ste promenili datum vracanja iznajmljivanja!", "Obavestenje", MessageBoxButtons.OK);
+            p.OcistiKontrole(this);
+            p.OcistiPanel(detalji1);
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -186,7 +196,6 @@ namespace TVP_projekat_1
             if (!string.IsNullOrWhiteSpace(tb_naziv_igrice_pretrazi.Text))
             {
                 string naziv = tb_naziv_igrice_pretrazi.Text;
-
                 iznajmljivanje_igrica = iznajmljivanje_igrica.Where(i => i.Naziv_igrice == naziv).ToList();
             }
 
@@ -212,7 +221,7 @@ namespace TVP_projekat_1
             dataGridView2.SelectionChanged += dataGridView2_SelectionChanged;
 
             if (iznajmljivanje_igrica.Count == 0)
-                p.Ocisti_panel(detalji2);
+                p.OcistiPanel(detalji2);
         }
 
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
@@ -260,10 +269,6 @@ namespace TVP_projekat_1
             dataGridView3.DataSource = null;
             dataGridView3.DataSource = igrice;
         }
-
-        // srediti ceo kod da ne bude spagetara
-        // mozda prebaciti neke funkcije u klase (Podaci)
-        // videti oko imena funkcija i metoda, imePrezime ime_prezime Ime_prezime Ime_Prezime ime_Prezime
         private void btn_dodaj_izdavanje_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tb_naziv_igrice.Text) ||
@@ -279,7 +284,7 @@ namespace TVP_projekat_1
 
             if(!int.TryParse(tb_godina_izdavanja.Text, out int godina_izdavanja))
             {
-                MessageBox.Show("Godina nije validna!", "Upozorenje", MessageBoxButtons.OK);
+                MessageBox.Show("Morate uneti validnu godinu izdavanja!", "Upozorenje", MessageBoxButtons.OK);
                 return;
             }
 
@@ -289,13 +294,19 @@ namespace TVP_projekat_1
             int.TryParse(nud_broj_dana.Value.ToString(), out int broj_dana);
             DateTime datum_vracanja = datum_iznajmljivanja.Date.AddDays(broj_dana);
 
-            Igrica igrica = Podaci.Igrice.FirstOrDefault(i => 
-                i.Naziv_igrice == tb_naziv_igrice.Text &&
-                i.Naziv_studija == tb_naziv_studija.Text &&
-                i.Zanr == tb_zanr.Text &&
-                i.Godina_izdavanja == godina_izdavanja &&
-                i.Platforma == tb_platforma.Text
-            );
+            if(datum_iznajmljivanja.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show("Morate uneti validan datum pocetka iznajmljivanja!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
+
+            Igrica igrica = Podaci.Igrice
+                .FirstOrDefault(i => 
+                    i.Naziv_igrice == tb_naziv_igrice.Text &&
+                    i.Naziv_studija == tb_naziv_studija.Text &&
+                    i.Zanr == tb_zanr.Text &&
+                    i.Godina_izdavanja == godina_izdavanja &&
+                    i.Platforma == tb_platforma.Text);
 
             if (igrica == null)
             {
@@ -318,8 +329,21 @@ namespace TVP_projekat_1
                 "aktivno"
             ));
 
+            // mnogo je malo da imamo samo statuse aktivno i vraceno
+            // zadatak zahteva da klijent moze da bira datum pocetka iznajmljivanja
+            // kada bi smo imali dodatan status zakazano/rezervisano bilo bi lakse
+
+            // iako je aktivna, moralo bi da se proveri da li je moguce iznajmiti igricu
+            // na primer imamo samo 1 dostupan primerak
+            // imamo jedno aktivno izdavanje (rezervisan) i neko hoce isto da iznajmi igricu
+            // datumi ne smeju da se preklapaju (prvi 24. - 28., a drugi 22. - 25. )
+            // isto i u Admin formi
+
+            if (datum_iznajmljivanja.Date == DateTime.Now.Date)
+                igrica.Broj_dostupnih_primeraka--;
+
             Podaci.Sacuvaj();
-            p.Ocisti(this);
+            p.OcistiKontrole(this);
 
             MessageBox.Show("Uspenso ste iznajmili novu igricu!", "Upozorenje", MessageBoxButtons.OK);
 

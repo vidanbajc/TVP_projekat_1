@@ -19,7 +19,7 @@ namespace TVP_projekat_1
             Podaci.Ucitaj();
         }
 
-        public void Ocisti(Control parent)
+        public void OcistiKontrole(Control parent)
         {
             foreach (Control c in parent.Controls)
             {
@@ -30,11 +30,11 @@ namespace TVP_projekat_1
                     dtp.ResetText();
 
                 if (c.HasChildren)
-                    Ocisti(c);
+                    OcistiKontrole(c);
             }
         }
 
-        public void Ocisti_panel(Panel p)
+        public void OcistiPanel(Panel p)
         {
             foreach(Control c in p.Controls)
             {
@@ -45,42 +45,43 @@ namespace TVP_projekat_1
 
         private void btn_prijava_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tb_korisnicko_ime.Text))
-                MessageBox.Show("Morate uneti korisnicko ime", "Upozorenje", MessageBoxButtons.OK);
+            if (string.IsNullOrWhiteSpace(tb_korisnicko_ime.Text) || string.IsNullOrWhiteSpace(tb_lozinka.Text))
+            {
+                MessageBox.Show("Morate popuniti sva neophodna polja!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
 
-            else if (string.IsNullOrWhiteSpace(tb_lozinka.Text))
-                MessageBox.Show("Morate uneti lozinku", "Upozorenje", MessageBoxButtons.OK);
+            string korisnicko_ime = tb_korisnicko_ime.Text;
+            string lozinka = tb_lozinka.Text;
+
+            Korisnik korisnik = Podaci.Korisnici
+                .FirstOrDefault(k => k.Korisnicko_ime == korisnicko_ime && 
+                                     k.Lozinka == lozinka);
+
+            if (korisnik == null)
+            {
+                MessageBox.Show("Uneli ste nepostojeceg korisnika, pokusajte ponovo!", "Upozorenje", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (korisnik.Vrsta_korisnika == "admin")
+            {
+                MessageBox.Show($"Uspesno ste se ulogovali kao {korisnik.Vrsta_korisnika} {korisnicko_ime}!", "Dobrodosli", MessageBoxButtons.OK);
+
+                Administrator admin = new Administrator(this, korisnik);
+                admin.Show();
+            }
 
             else
             {
-                string korisnicko_ime = tb_korisnicko_ime.Text;
-                string lozinka = tb_lozinka.Text;
+                MessageBox.Show($"Uspesno ste se ulogovali kao {korisnik.Vrsta_korisnika} {korisnicko_ime}!", "Dobrodosli", MessageBoxButtons.OK);
 
-                Korisnik nadjen = Podaci.Korisnici.FirstOrDefault(k => k.Korisnicko_ime == korisnicko_ime && k.Lozinka == lozinka);
-
-                if (nadjen == null)
-                    MessageBox.Show("Uneli ste nepostojeceg korisnika, pokusajte ponovo", "Upozorenje", MessageBoxButtons.OK);
-
-                else if(nadjen.Vrsta_korisnika == "admin")
-                {
-                    MessageBox.Show($"Uspesno ste se ulogovali kao {nadjen.Vrsta_korisnika} {korisnicko_ime}!", "Dobrodosli", MessageBoxButtons.OK);
-                    Administrator admin = new Administrator(this, nadjen);
-                    admin.Show();
-
-                    Ocisti(this);
-                    this.Hide();
-                }
-
-                else if (nadjen.Vrsta_korisnika == "klijent")
-                {
-                    MessageBox.Show($"Uspesno ste se ulogovali kao {nadjen.Vrsta_korisnika} {korisnicko_ime}!", "Dobrodosli", MessageBoxButtons.OK);
-                    Klijent klijent = new Klijent(this, nadjen);
-                    klijent.Show();
-
-                    Ocisti(this);
-                    this.Hide();
-                }
+                Klijent klijent = new Klijent(this, korisnik);
+                klijent.Show();
             }
+
+            OcistiKontrole(this);
+            this.Hide();
         }
 
         private void btn_izlaz_Click(object sender, EventArgs e)

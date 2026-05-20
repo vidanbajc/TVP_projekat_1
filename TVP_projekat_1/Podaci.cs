@@ -71,25 +71,15 @@ namespace TVP_projekat_1
             if(!File.Exists("korisnici.xml"))
             {
                 korisnici.Add(new Korisnik(1, "a", "a", "a", "a", "admin"));
-                korisnici.Add(new Korisnik(2, "Ognjen", "Colovic", "cj", "sifra", "klijent"));
-                korisnici.Add(new Korisnik(3, "Nemanja", "Marinkovic", "sj", "sifra", "klijent"));
-                korisnici.Add(new Korisnik(4, "b", "b", "b", "b", "klijent"));
+                korisnici.Add(new Korisnik(2, "b", "b", "b", "b", "klijent"));
             }
 
-            if(!File.Exists("igrice.xml"))
-            {
-                igrice.Add(new Igrica(1, "League of Legends", "Riot", "moba", 2011, "aa", "aaaaaa", 2000, 5, 13));
-                igrice.Add(new Igrica(2, "Counter Strike 2", "Valve", "moba", 2025, "aa", "aaaaaa", 2500, 10, 13));
-                igrice.Add(new Igrica(3, "Rainbow", "aa", "aa", 2011, "aa", "aaaaaa", 3000, 5, 14));
-            }
+            if(!File.Exists("igrice.xml")) { }
 
-            if(!File.Exists("izdavanja.xml"))
-            {
-                izdavanja.Add(new Izdavanje(1, 1, new DateTime(2026, 5, 16, 14, 30, 0), new DateTime(2026, 5, 26), 4000, "aktivno"));
-            }
+            if(!File.Exists("izdavanja.xml")) { }
         }
 
-        public static int id_novog_korisnika()
+        public static int IdNovogKorisnika()
         {
             if (korisnici.Count == 0)
                 return 1;
@@ -99,7 +89,7 @@ namespace TVP_projekat_1
             return max;
         }
 
-        public static int id_nove_igrice()
+        public static int IdNoveIgrice()
         {
             if (igrice.Count == 0)
                 return 1;
