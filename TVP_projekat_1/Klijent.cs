@@ -117,7 +117,8 @@ namespace TVP_projekat_1
             DateTime.TryParse(red.Cells[8].Value?.ToString(), out DateTime datum_iznajmljivanja);
             DateTime.TryParse(red.Cells[9].Value?.ToString(), out DateTime datum_vracanja);
 
-            if(datum_iznajmljivanja.Date > datum_vracanja.Date)
+            if(datum_iznajmljivanja.Date > datum_vracanja.Date ||
+               datum_iznajmljivanja.Date == dtp_datum_vracanja.Value.Date)
             {
                 MessageBox.Show("Morate uneti validan datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
                 return;

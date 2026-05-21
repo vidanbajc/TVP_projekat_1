@@ -129,11 +129,12 @@ namespace TVP_projekat_1
             }
 
             if (Podaci.Igrice
-                .Any(i => i.Naziv_igrice == tb_naziv_igrice.Text &&
-                          i.Naziv_studija == tb_naziv_studija.Text &&
-                          i.Zanr == tb_zanr.Text &&
-                          i.Godina_izdavanja == godina_izdavanja &&
-                          i.Platforma == tb_platforma.Text))
+                .Any(i =>
+                    i.Naziv_igrice == tb_naziv_igrice.Text &&
+                    i.Naziv_studija == tb_naziv_studija.Text &&
+                    i.Zanr == tb_zanr.Text &&
+                    i.Godina_izdavanja == godina_izdavanja &&
+                    i.Platforma == tb_platforma.Text))
             {
                 MessageBox.Show("Igrica sa istim nazivom, studijom, zanrom, godinom izdavanja i platformom vec postoji!", "Upozorenje", MessageBoxButtons.OK);
                 return;
@@ -180,7 +181,7 @@ namespace TVP_projekat_1
                 return;
             }
 
-            if(dtp_datum_vracanja.Value.Date < DateTime.Now.Date)
+            if(dtp_datum_vracanja.Value.Date <= DateTime.Now.Date)
             {
                 MessageBox.Show("Morate uneti validan datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
                 return;
@@ -525,7 +526,7 @@ namespace TVP_projekat_1
                 return;
             }
 
-            if (dtp_datum_vracanja.Value.Date < DateTime.Now.Date)
+            if (dtp_datum_vracanja.Value.Date <= DateTime.Now.Date)
             {
                 MessageBox.Show("Morate uneti validan datum vracanja!", "Upozorenje", MessageBoxButtons.OK);
                 return;

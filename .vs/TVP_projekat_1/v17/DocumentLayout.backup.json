@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\",
+  "WorkspaceRootPath": "C:\\Users\\PC\\TVP_projekat_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|c:\\users\\bajc\\desktop\\tvp_projekat_1\\tvp_projekat_1\\klijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\PC\\TVP_projekat_1\\tvp_projekat_1\\klijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\klijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\tvp_projekat_1\\klijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\PC\\TVP_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|C:\\Users\\PC\\TVP_projekat_1\\tvp_projekat_1\\klijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\klijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|c:\\users\\pc\\tvp_projekat_1\\tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA2A9FFE-87C1-4E1B-84B4-689D56711C45}|TVP_projekat_1\\TVP_projekat_1.csproj|solutionrelative:tvp_projekat_1\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Administrator.cs",
-              "DocumentMoniker": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs",
               "RelativeDocumentMoniker": "TVP_projekat_1\\Administrator.cs",
-              "ToolTip": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs",
+              "ToolTip": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs",
               "RelativeToolTip": "TVP_projekat_1\\Administrator.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAEwMwAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAP4BAAAAAAAAAAAAAFABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T18:14:39.526Z",
               "EditorCaption": ""
@@ -45,9 +45,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Administrator.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs",
               "RelativeDocumentMoniker": "TVP_projekat_1\\Administrator.cs",
-              "ToolTip": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs [Design]",
+              "ToolTip": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Administrator.cs [Design]",
               "RelativeToolTip": "TVP_projekat_1\\Administrator.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T19:44:52.735Z",
@@ -55,24 +55,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Klijent.cs",
-              "DocumentMoniker": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs",
               "RelativeDocumentMoniker": "TVP_projekat_1\\Klijent.cs",
-              "ToolTip": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs",
+              "ToolTip": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs",
               "RelativeToolTip": "TVP_projekat_1\\Klijent.cs",
-              "ViewState": "AgIAACIBAAAAAAAAAAAAACkBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T17:52:57.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Klijent.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs",
               "RelativeDocumentMoniker": "TVP_projekat_1\\Klijent.cs",
-              "ToolTip": "C:\\Users\\Bajc\\Desktop\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs [Design]",
+              "ToolTip": "C:\\Users\\PC\\TVP_projekat_1\\TVP_projekat_1\\Klijent.cs [Design]",
               "RelativeToolTip": "TVP_projekat_1\\Klijent.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T17:50:35.986Z",
